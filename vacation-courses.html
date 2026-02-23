@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,267 +7,274 @@
 <title>Vacation Courses | Upadhi Hindi Tuition Center</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
 <style>
-:root {
-    --desk:#e5e7eb;
-    --paper:#fbfdff;
-    --line:#dbeafe;
-    --margin:#ef4444;
-    --ink:#0f172a;
-    --muted:#475569;
-    --accent:#1e40af;
+:root{
+  --primary:#1e293b;
+  --accent:#2563eb;
+  --bg:#f8fafc;
+  --text:#0f172a;
+  --muted:#64748b;
+  --paper:#fbfdff;
+  --line:#e6edf7;
+  --margin:#d32f2f;
 }
 
-*{box-sizing:border-box}
-
+/* BODY + FADE IN */
 body{
-    margin:0;
-    background:var(--desk);
-    font-family:'Inter',system-ui,-apple-system,sans-serif;
-    font-size:15px;
-    letter-spacing:.2px;
-    color:var(--ink);
-    line-height:1.7;
+  margin:0;
+  font-family:'Inter',system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  opacity:0;
+  animation:fadeIn .5s ease forwards;
 }
 
-.container{padding:18px}
-.max{max-width:920px;margin:auto}
-.muted{color:var(--muted)}
+@keyframes fadeIn{
+  to{opacity:1;}
+}
+
+/* CONTAINER */
+.container{padding:22px}
+.max{max-width:950px;margin:auto}
 
 /* HEADER */
 header{
-    background:#ffffff;
-    border-bottom:1px solid #e5e7eb;
-    padding:14px 0;
-    box-shadow:0 4px 10px rgba(0,0,0,.04);
+  background:#ffffff;
+  padding:14px 0;
+  border-bottom:1px solid #e5e7eb;
 }
 
 .header-inner{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
 .brand-wrap{
-    display:flex;
-    align-items:center;
-    gap:12px;
+  display:flex;
+  align-items:center;
+  gap:10px;
 }
 
 .logo{
-    width:48px;
-    height:48px;
-    object-fit:contain;
-}
-
-.brand-text{
-    display:flex;
-    flex-direction:column;
+  width:34px;
 }
 
 .brand-name-hi{
-    font-size:22px;
-    font-weight:700;
-    color:var(--accent);
+  font-size:20px;
+  font-weight:700;
+  color:var(--primary);
 }
 
 .brand-sub{
-    font-size:12px;
-    color:var(--muted);
+  font-size:12px;
+  color:var(--muted);
 }
 
 .header-btn{
-    font-size:14px;
-    padding:8px 16px;
-    border-radius:6px;
-    background:var(--accent);
-    color:#fff;
-    text-decoration:none;
-    font-weight:600;
+  padding:8px 16px;
+  border-radius:6px;
+  background:var(--accent);
+  color:#fff;
+  font-weight:600;
+  text-decoration:none;
+  font-size:13px;
 }
 
 /* NOTICE BOARD */
 .notice-board{
-    background:#fffdf6;
-    border:1px solid #e5e7eb;
-    border-radius:8px;
-    padding:20px 22px;
-    margin-bottom:28px;
-    box-shadow:0 8px 18px rgba(0,0,0,.06);
+  background:#ffffff;
+  border-radius:8px;
+  padding:22px;
+  margin-bottom:28px;
+  box-shadow:0 6px 16px rgba(0,0,0,.06);
 }
 
 .notice-title{
-    font-family:'Playfair Display',serif;
-    font-size:20px;
-    font-weight:600;
-    font-weight:700;
-    margin-bottom:10px;
-    text-align:center;
-    border-bottom:1px solid #e5e7eb;
-    padding-bottom:8px;
+  font-family:'Playfair Display',serif;
+  font-size:20px;
+  text-align:center;
+  margin-bottom:6px;
+  color:var(--primary);
 }
 
 .notice-year{
-    text-align:center;
-    font-size:14px;
-    margin-bottom:12px;
-    color:var(--muted);
-}
-
-.notice-list{
-    margin:0;
-    padding-left:18px;
+  text-align:center;
+  font-size:14px;
+  color:var(--muted);
+  margin-bottom:12px;
 }
 
 .notice-list li{
-    margin:8px 0;
-    font-size:15px;
+  margin:8px 0;
 }
 
-.notice-tag{
-    font-size:11px;
-    padding:2px 6px;
-    border-radius:4px;
-    background:#e0e7ff;
-    color:#1e3a8a;
-    margin-left:6px;
-}
-
-/* WHY PARENTS STRIP */
+/* WHY STRIP */
 .why-strip{
-    background:#ffffff;
-    border:1px solid #e5e7eb;
-    border-radius:8px;
-    padding:16px 20px;
-    margin-bottom:28px;
-    box-shadow:0 6px 14px rgba(0,0,0,.05);
+  background:#ffffff;
+  border-radius:8px;
+  padding:18px;
+  margin-bottom:28px;
+  box-shadow:0 6px 16px rgba(0,0,0,.06);
 }
 
 .why-title{
-    font-size:15px;
-    font-weight:600;
-    margin-bottom:10px;
-    text-align:center;
+  text-align:center;
+  font-weight:600;
+  margin-bottom:12px;
+  color:var(--primary);
 }
 
 .why-grid{
-    display:flex;
-    justify-content:space-between;
-    gap:14px;
-    font-size:14px;
-    color:#334155;
-}
-
-.why-grid div{
-    flex:1;
-    text-align:center;
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  font-size:14px;
+  text-align:center;
+  flex-wrap:wrap;
 }
 
 /* NOTEBOOK PAGE */
 .notebook-page{
-    position:relative;
-    background:
-        repeating-linear-gradient(to bottom,
-            var(--paper),
-            var(--paper) 28px,
-            var(--line) 29px);
-    border-radius:10px;
-    padding:30px 24px 36px 60px;
-    margin-bottom:28px;
-    box-shadow:0 10px 18px rgba(0,0,0,.08);
+  position:relative;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      var(--paper),
+      var(--paper) 28px,
+      var(--line) 29px
+    );
+  border-radius:10px;
+  padding:36px 28px 40px 70px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  border:1px solid #e5e7eb;
 }
 
 .notebook-page::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:40px;
-    width:2px;
-    height:100%;
-    background:var(--margin);
+  content:"";
+  position:absolute;
+  left:48px;
+  top:0;
+  width:2px;
+  height:100%;
+  background:var(--margin);
 }
 
 .page-header{
-    display:flex;
-    justify-content:space-between;
-    font-size:12px;
-    color:var(--muted);
-    margin-bottom:18px;
+  display:flex;
+  justify-content:space-between;
+  font-size:12px;
+  color:var(--muted);
+  margin-bottom:20px;
 }
 
 h1{
-    font-family:'Playfair Display',serif;
-    font-size:32px;
-    font-weight:600;
-    margin:0 0 12px;
-    letter-spacing:.5px;
+  font-family:'Playfair Display',serif;
+  font-size:30px;
+  margin:0 0 12px;
+  color:var(--primary);
 }
 
 h2{
-    font-family:'Playfair Display',serif;
-    font-size:22px;
-    font-weight:600;
-    margin:20px 0 8px;
-    color:#1e3a8a;
+  font-family:'Playfair Display',serif;
+  font-size:20px;
+  margin:18px 0 8px;
+  color:var(--accent);
 }
 
 .label{
-    font-size:11px;
-    font-weight:600;
-    letter-spacing:1px;
-    color:var(--muted);
-    text-transform:uppercase;
-    margin-top:18px;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  margin-top:18px;
+  color:var(--muted);
 }
 
-ul{
-    margin:6px 0 0 18px;
-}
-
-li{
-    margin:4px 0;
-}
+ul{margin:6px 0 0 18px}
+li{margin:6px 0}
 
 /* CTA */
 .cta{
-    margin-top:28px;
-    padding-top:18px;
-    border-top:2px dashed #c7d2fe;
-    text-align:center;
+  margin-top:30px;
+  padding-top:18px;
+  border-top:1px dashed #d1d5db;
+  text-align:center;
 }
 
 .btn{
-    display:inline-block;
-    padding:9px 18px;
-    margin:6px;
-    border-radius:6px;
-    border:1px solid #c7d2fe;
-    background:#ffffff;
-    color:var(--ink);
-    text-decoration:none;
-    font-size:14px;
+  display:inline-block;
+  padding:10px 22px;
+  margin:8px;
+  border-radius:6px;
+  background:var(--accent);
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+  transition:.2s;
 }
 
-.btn.primary{
-    background:var(--accent);
-    color:#ffffff;
-    border-color:var(--accent);
-    box-shadow:0 4px 8px rgba(30,64,175,.25);
+.btn:hover{
+  background:#1d4ed8;
 }
 
 /* FOOTER */
 footer{
-    text-align:center;
-    font-size:12px;
-    color:#64748b;
-    padding:26px 0;
-}
-p{
-    margin:10px 0;
+  text-align:center;
+  font-size:12px;
+  color:var(--muted);
+  padding:26px 0;
+  border-top:1px solid #e5e7eb;
+  background:#ffffff;
 }
 
-ul li{
-    margin:6px 0;
+/* RESPONSIVE */
+@media(max-width:768px){
+
+  .container{
+    padding:16px;
+  }
+
+  .header-inner{
+    flex-direction:column;
+    gap:12px;
+    text-align:center;
+  }
+
+  .why-grid{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .notebook-page{
+    padding:28px 20px 35px 55px;
+  }
+
+  .notebook-page::before{
+    left:35px;
+  }
+
+  h1{
+    font-size:24px;
+  }
+
+  h2{
+    font-size:18px;
+  }
+
+  .btn{
+    width:100%;
+    max-width:280px;
+  }
+
+  .cta{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+
 }
 </style>
 </head>
@@ -276,114 +282,106 @@ ul li{
 <body>
 
 <header>
-<div class="container max header-inner">
+  <div class="container max header-inner">
     <div class="brand-wrap">
-        <img src="images/logo.png" alt="Upadhi Logo" class="logo">
-        <div class="brand-text">
-            <span class="brand-name-hi">उपाधि</span>
-            <span class="brand-sub">Hindi Tuition Centre</span>
-        </div>
+      <img src="images/logo.png" class="logo">
+      <div>
+        <div class="brand-name-hi">उपाधि</div>
+        <div class="brand-sub">Hindi Tuition Centre</div>
+      </div>
     </div>
     <a href="index.html" class="header-btn">Home</a>
-</div>
+  </div>
 </header>
 
 <section class="container max">
 
-<!-- Academic Announcements -->
-<div class="notice-board">
+  <div class="notice-board">
     <div class="notice-title">Academic Announcements</div>
     <div class="notice-year">Academic Year 2026 – 2027</div>
     <ul class="notice-list">
-        <li>Vacation Classes – Now Open <span class="notice-tag">Limited Seats</span></li>
-        <li>Hindi Prachar Sabha Examination <span class="notice-tag">Main Program</span></li>
-        <li>School Tuition Classes Available</li>
-        <li>Small Batches • Individual Attention</li>
+      <li>Vacation Classes – Now Open</li>
+      <li>Hindi Prachar Sabha Examination</li>
+      <li>School Tuition Classes Available</li>
+      <li>Small Batches • Individual Attention</li>
     </ul>
-</div>
+  </div>
 
-<!-- Why Parents Choose Us -->
-<div class="why-strip">
+  <div class="why-strip">
     <div class="why-title">Why Parents Choose Us</div>
     <div class="why-grid">
-        <div>Structured Learning Plan</div>
-        <div>Small Focused Batches</div>
-        <div>Individual Attention</div>
-        <div>Experienced Guidance</div>
+      <div>Structured Learning Plan</div>
+      <div>Small Focused Batches</div>
+      <div>Individual Attention</div>
+      <div>Experienced Guidance</div>
     </div>
-</div>
+  </div>
 
-<!-- Main Course Content -->
-<div class="notebook-page">
+  <div class="notebook-page">
 
     <div class="page-header">
-        <span>Date: ____________</span>
-        <span>Subject: Vacation Classes</span>
+      <span>Date: ____________</span>
+      <span>Subject: Vacation Classes</span>
     </div>
 
-    <p class="muted" style="font-size:13px;">
-        • Structured Learning • Experienced Faculty
-    </p>
-
     <h1>Vacation Classes – Overview</h1>
-    <p class="muted">
-        A structured vacation program focusing on strong foundations,
-        regular practice, and confident learning habits.
+    <p>
+      A structured vacation program focusing on strong foundations,
+      regular practice, and confident learning habits.
     </p>
-
-    <div class="label">Languages</div>
+ <div class="label">Languages</div>
     <h2>English • Malayalam • Hindi</h2>
     <ul>
-        <li>Grammar fundamentals</li>
-        <li>Reading with understanding</li>
-        <li>Sentence and paragraph writing</li>
-        <li>Vocabulary improvement</li>
+      <li>Grammar fundamentals</li>
+      <li>Reading with understanding</li>
+      <li>Sentence and paragraph writing</li>
+      <li>Vocabulary improvement</li>
     </ul>
 
     <div class="label">Communication Development</div>
     <h2>Spoken English & Confidence Building</h2>
     <ul>
-        <li>Daily speaking practice</li>
-        <li>Listening & response skills</li>
-        <li>Confidence in expression</li>
+      <li>Daily speaking practice</li>
+      <li>Listening & response skills</li>
+      <li>Confidence in expression</li>
     </ul>
 
     <div class="label">Logical Thinking</div>
     <h2>Reasoning & Focus Development</h2>
     <ul>
-        <li>Pattern recognition</li>
-        <li>Logic-based exercises</li>
-        <li>Improves concentration skills</li>
+      <li>Pattern recognition</li>
+      <li>Logic-based exercises</li>
+      <li>Improves concentration skills</li>
     </ul>
 
     <div class="label">Handwriting</div>
     <h2>Neat Presentation & Writing Skills</h2>
     <ul>
-        <li>Correct letter formation</li>
-        <li>Writing speed with accuracy</li>
+      <li>Correct letter formation</li>
+      <li>Writing speed with accuracy</li>
     </ul>
 
     <div class="label">Physical Activity</div>
     <h2>Weekly Movement Session</h2>
     <ul>
-        <li>Guided movement exercises</li>
-        <li>Improves posture and coordination</li>
+      <li>Guided movement exercises</li>
+      <li>Improves posture and coordination</li>
     </ul>
+    <!-- keep your full content here -->
 
     <div class="cta">
-        <h2 style="margin-bottom:6px;">Admissions Now Open for 2026–2027</h2>
-        <p class="muted">Scan Completed • Contact Us to Reserve Your Seat</p>
-        <a href="#" class="btn primary">Call</a>
-        <a href="#" class="btn">WhatsApp</a>
-        <a href="#" class="btn">Register</a>
+      <h2>Admissions Now Open for 2026–2027</h2>
+      <a href="tel:+919633312986" class="btn">Call Now</a>
+      <a href="https://wa.me/919633312986" class="btn" target="_blank">WhatsApp</a>
+      <a href="https://forms.gle/TJEXusctnzxcdh7J9" class="btn">Register</a>
     </div>
 
-</div>
+  </div>
 
 </section>
 
 <footer>
-© 2026 Upadhi Hindi Tuition Center • Structured Coaching • Trusted Guidance
+  © 2026 Upadhi Hindi Tuition Center • Structured Coaching • Trusted Guidance
 </footer>
 
 </body>
