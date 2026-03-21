@@ -11,13 +11,13 @@
 <style>
 :root{
   --primary:#1e293b;
-  --accent:#2563eb;
+  --accent:#3b82f6; /* softer blue */
   --bg:#f8fafc;
   --text:#0f172a;
   --muted:#64748b;
   --paper:#fbfdff;
   --line:#e6edf7;
-  --margin:#d32f2f;
+  --margin:#ef4444; /* softer red */
 }
 
 /* BODY + FADE IN */
@@ -84,9 +84,18 @@ header{
 
 /* NOTICE BOARD */
 .notice-board{
-  background:#ffffff;
+  background:#f1f5f9; /* subtle tint */
   border-radius:8px;
   padding:22px;
+  margin-bottom:28px;
+  box-shadow:0 6px 16px rgba(0,0,0,.06);
+}
+
+/* WHY STRIP */
+.why-strip{
+  background:#eef2ff; /* subtle blue tint */
+  border-radius:8px;
+  padding:18px;
   margin-bottom:28px;
   box-shadow:0 6px 16px rgba(0,0,0,.06);
 }
@@ -108,15 +117,6 @@ header{
 
 .notice-list li{
   margin:8px 0;
-}
-
-/* WHY STRIP */
-.why-strip{
-  background:#ffffff;
-  border-radius:8px;
-  padding:18px;
-  margin-bottom:28px;
-  box-shadow:0 6px 16px rgba(0,0,0,.06);
 }
 
 .why-title{
@@ -193,7 +193,11 @@ h2{
 }
 
 ul{margin:6px 0 0 18px}
-li{margin:6px 0}
+
+li{
+  margin:6px 0;
+  line-height:1.5;
+}
 
 /* CTA */
 .cta{
@@ -214,10 +218,11 @@ li{margin:6px 0}
   font-weight:600;
   font-size:14px;
   transition:.2s;
+  box-shadow:0 4px 10px rgba(59,130,246,0.25);
 }
 
 .btn:hover{
-  background:#1d4ed8;
+  background:#2563eb;
 }
 
 /* FOOTER */
@@ -324,30 +329,58 @@ footer{
       <span>Subject: Vacation Classes</span>
     </div>
 
-    <h1>Vacation Classes – Overview</h1>
+    <h1>Vacation Classes for Strong Foundations & Confident Learning</h1>
+
+    <p style="font-size:14px;color:#475569;margin-top:6px;">
+      Designed for school students to improve basics, communication, and confidence in a supportive environment.
+    </p>
+
     <p>
       A structured vacation program focusing on strong foundations,
       regular practice, and confident learning habits.
     </p>
- <div class="label">Languages</div>
+
+    <div class="label">Languages</div>
     <h2>English • Malayalam • Hindi</h2>
+
     <ul>
-      <li>Grammar fundamentals</li>
-      <li>Reading with understanding</li>
-      <li>Sentence and paragraph writing</li>
-      <li>Vocabulary improvement</li>
+      <li>Strong grammar foundation</li>
+      <li>Improved reading and understanding skills</li>
+      <li>Better sentence and paragraph writing</li>
+      <li>Vocabulary and word usage improvement</li>
     </ul>
 
-    <div class="label">Communication Development</div>
-    <h2>Spoken English & Confidence Building</h2>
+    <p style="font-size:14px;color:#1e40af;font-weight:500;">
+      Special focus on spoken English to help children speak confidently in daily life.
+    </p>
+
+    <div class="label">Course Structure</div>
+    <h2>Spoken English – Step by Step Learning</h2>
+
     <ul>
-      <li>Daily speaking practice</li>
-      <li>Listening & response skills</li>
-      <li>Confidence in expression</li>
+      <li><strong>Basics & Pronunciation</strong><br>
+        Children learn alphabets, correct sounds, basic vocabulary, and simple sentence formation.
+      </li>
+      <li><strong>Basic Grammar</strong><br>
+        Introduction to simple grammar, sentence structures, and commonly used words in daily life.
+      </li>
+      <li><strong>Tenses & Usage</strong><br>
+        Understanding how to speak about past, present, and future situations with clarity.
+      </li>
+      <li><strong>Daily Conversations</strong><br>
+        Practice speaking in real-life situations like home, school, shops, and phone conversations.
+      </li>
+      <li><strong>Speaking Activities</strong><br>
+        Role plays, storytelling, and group discussions to build confidence and fluency.
+      </li>
+      <li><strong>Public Speaking</strong><br>
+        Self-introduction, short speeches, and presentation practice to improve stage confidence.
+      </li>
     </ul>
 
     <div class="label">Logical Thinking</div>
     <h2>Reasoning & Focus Development</h2>
+
     <ul>
       <li>Pattern recognition</li>
       <li>Logic-based exercises</li>
@@ -356,6 +389,7 @@ footer{
 
     <div class="label">Handwriting</div>
     <h2>Neat Presentation & Writing Skills</h2>
+
     <ul>
       <li>Correct letter formation</li>
       <li>Writing speed with accuracy</li>
@@ -363,14 +397,18 @@ footer{
 
     <div class="label">Physical Activity</div>
     <h2>Weekly Movement Session</h2>
+
     <ul>
       <li>Guided movement exercises</li>
       <li>Improves posture and coordination</li>
     </ul>
-    <!-- keep your full content here -->
 
     <div class="cta">
-      <h2>Admissions Now Open for 2026–2027</h2>
+      <h2>Limited Seats Available – Enroll Now</h2>
+      <p style="font-size:13px;color:#64748b;">
+        Small batches to ensure individual attention.
+      </p>
+
       <a href="tel:+919633312986" class="btn">Call Now</a>
       <a href="https://wa.me/919633312986" class="btn" target="_blank">WhatsApp</a>
       <a href="https://forms.gle/TJEXusctnzxcdh7J9" class="btn">Register</a>
