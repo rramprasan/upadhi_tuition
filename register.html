@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Registration | Upadhi Tuition</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --primary:#1e293b;
+  --accent:#3b82f6;
+  --bg:#f8fafc;
+  --text:#0f172a;
+  --muted:#64748b;
+  --paper:#fbfdff;
+  --line:#e6edf7;
+  --margin:#f87171;
+}
+
+/* BODY */
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+  background:linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+  animation:fadeIn .4s ease;
+}
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(10px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* HEADER */
+header{
+  background:#fff;
+  padding:14px;
+  border-bottom:1px solid #e5e7eb;
+  text-align:center;
+  font-weight:600;
+  position:sticky;
+  top:0;
+  z-index:10;
+  box-shadow:0 6px 18px rgba(15, 23, 42, .06);
+}
+
+/* NOTEBOOK */
+.form-page{
+  max-width:700px;
+  margin:30px auto;
+  background:
+    repeating-linear-gradient(to bottom,
+      var(--paper),
+      var(--paper) 28px,
+      var(--line) 29px);
+  padding:35px 25px 40px 65px;
+  border-radius:12px;
+  position:relative;
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+@media (max-width: 640px){
+  .form-page{
+    margin:16px;
+    padding:26px 16px 28px 44px;
+  }
+  .form-page::before{
+    left:30px;
+  }
+}
+
+.form-page::before{
+  content:"";
+  position:absolute;
+  left:45px;
+  top:0;
+  width:2px;
+  height:100%;
+  background:var(--margin);
+}
+
+/* TITLE */
+h1{
+  font-family:'Playfair Display',serif;
+  font-size:26px;
+  margin-bottom:15px;
+  color:var(--text);
+}
+
+form{
+  margin-top:10px;
+}
+
+label{
+  display:block;
+  margin:10px 0 6px;
+  color:var(--text);
+  font-weight:500;
+  font-size:14px;
+}
+
+/* LABEL */
+.label{
+  font-size:11px;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-top:22px;
+  margin-bottom:6px;
+  letter-spacing:1px;
+}
+
+/* INPUT */
+input, select, textarea{
+  width:100%;
+  padding:11px;
+  border:1px solid #e5e7eb;
+  border-radius:8px;
+  margin-bottom:12px;
+  font-size:14px;
+  transition:.2s;
+  background:#fff;
+}
+
+textarea{
+  min-height:100px;
+  resize:vertical;
+}
+
+input:hover, textarea:hover{
+  border-color:#cbd5f5;
+}
+
+input:focus, textarea:focus{
+  border-color:var(--accent);
+  box-shadow:0 0 0 2px rgba(59,130,246,.15);
+  outline:none;
+}
+
+/* CHECKBOX */
+.checkbox-group{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.checkbox-group label{
+  display:inline-flex;
+  align-items:center;
+  margin:0;
+  font-weight:500;
+  position:relative;
+}
+
+.checkbox-group input{
+  position:absolute;
+  opacity:0;
+  pointer-events:none;
+  width:0;
+  height:0;
+}
+
+.checkbox-group span{
+  background:#fff;
+  padding:8px 12px;
+  border-radius:999px;
+  font-size:13px;
+  border:1px solid #e5e7eb;
+  cursor:pointer;
+  transition:.2s;
+  user-select:none;
+}
+
+.checkbox-group label:hover span{
+  background:#eff6ff;
+  border-color:var(--accent);
+}
+
+.checkbox-group input:checked + span{
+  background:rgba(59,130,246,.12);
+  border-color:rgba(59,130,246,.55);
+}
+
+/* BUTTON */
+button{
+  margin-top:25px;
+  width:100%;
+  padding:13px;
+  background:#25D366;
+  border:none;
+  color:#fff;
+  font-weight:600;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:15px;
+  transition:.2s;
+}
+
+button:hover{
+  background:#1ebe5d;
+  transform:translateY(-1px);
+}
+
+button:active{
+  transform:scale(.98);
+}
+</style>
+</head>
+
+<body>
+
+<header>Upadhi Tuition Center – Registration</header>
+
+<div class="form-page">
+
+<h1>Student Registration</h1>
+
+<form id="form">
+
+<div class="label">Parent Details</div>
+<label>Guardian Name *</label>
+<input type="text" id="guardian" required>
+
+<label>Phone Number *</label>
+<input type="text" id="phone" required>
+
+<label>Additional Phone Number</label>
+<input type="text" id="phone2">
+
+<div class="label">Student Details</div>
+<label>Student Name *</label>
+<input type="text" id="student" required>
+<label>Class / Grade</label>
+<input type="text" id="class">
+<label>School Name</label>
+<input type="text" id="school">
+
+<div class="label">Course</div>
+<div class="checkbox-group course-options" id="course">
+  <label>
+    <input type="checkbox" name="course" value="School Tuition">
+    <span>School Tuition</span>
+  </label>
+  <label>
+    <input type="checkbox" name="course" value="Hindi Prachar Exams">
+    <span>Hindi Prachar Exams</span>
+  </label>
+  <label>
+    <input type="checkbox" name="course" value="Vacation Classes">
+    <span>Vacation Classes</span>
+  </label>
+</div>
+
+<div class="label">Additional Info</div>
+<textarea id="notes" placeholder="Any notes or special attention"></textarea>
+
+<button type="submit">Submit Application</button>
+
+</form>
+
+</div>
+
+<script>
+document.getElementById("form").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const guardian = document.getElementById('guardian');
+  const phone = document.getElementById('phone');
+  const phone2 = document.getElementById('phone2');
+  const student = document.getElementById('student');
+  const classEl = document.getElementById('class');
+  const school = document.getElementById('school');
+  const notes = document.getElementById('notes');
+
+  let courses=[];
+  document.querySelectorAll('.course-options input[type="checkbox"]:checked')
+    .forEach(el=>courses.push(el.value));
+
+  let msg=`*New Registration*%0A
+Guardian: ${guardian.value}%0A
+Phone: ${phone.value}%0A
+${phone2.value ? `Additional Phone: ${phone2.value}%0A` : ''}
+Student: ${student.value}%0A
+Class: ${classEl.value}%0A
+School: ${school.value}%0A
+Course: ${courses.join(", ")}%0A
+Notes: ${notes.value}`;
+
+  window.open(`https://wa.me/919633312986?text=${msg}`, '_blank');
+});
+</script>
+
+</body>
+</html>
