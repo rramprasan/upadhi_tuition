@@ -45,6 +45,13 @@ header{
   box-shadow:0 6px 18px rgba(15, 23, 42, .06);
 }
 
+@media (max-width: 640px){
+  header{
+    padding:12px 10px;
+    font-size:14px;
+  }
+}
+
 /* NOTEBOOK */
 .form-page{
   max-width:700px;
@@ -62,11 +69,17 @@ header{
 
 @media (max-width: 640px){
   .form-page{
-    margin:16px;
-    padding:26px 16px 28px 44px;
+    margin:12px;
+    padding:22px 14px 24px 40px;
   }
   .form-page::before{
-    left:30px;
+    left:26px;
+  }
+}
+
+@media (max-width: 380px){
+  .form-page{
+    padding:20px 12px 22px 36px;
   }
 }
 
