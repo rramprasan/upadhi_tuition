@@ -3,176 +3,145 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title>Contact | Upadhi Tuition Center</title>
+<meta name="description" content="Contact Upadhi Tuition Center for admissions and enquiries about Hindi Prachar Sabha coaching and school tuition.">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Noto+Serif+Devanagari:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --primary:#1e293b;
-  --accent:#2563eb;
-  --bg:#f8fafc;
-  --text:#0f172a;
-  --muted:#64748b;
+  --ink:#1c2541;
+  --paper:#f5efe0;
+  --card:#ffffff;
+  --accent:#b3472d;
+  --accent-dark:#8f3620;
+  --marigold:#c98a2c;
+  --muted:#6b6458;
+  --line:#ded2ba;
 }
 
-/* BODY + FADE */
+*{box-sizing:border-box;}
+
 body{
   margin:0;
   font-family:'Inter',system-ui,sans-serif;
-  background:var(--bg);
-  color:var(--text);
+  background:var(--paper);
+  color:var(--ink);
   opacity:0;
-  animation:fadeIn .5s ease forwards;
+  animation:fadeIn .6s ease forwards;
 }
 
-@keyframes fadeIn{
-  to{opacity:1;}
+@keyframes fadeIn{ to{opacity:1;} }
+
+.container{padding:0 22px;}
+.max{max-width:900px;margin:auto;}
+
+.devanagari{ font-family:'Noto Serif Devanagari',serif; }
+.mono-label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--accent);
+  font-weight:600;
 }
 
-/* CONTAINER */
-.container{padding:22px}
-.max{max-width:900px;margin:auto}
+a{ color:inherit; }
 
 /* HEADER */
-header{
-  background:#ffffff;
-  padding:14px 0;
-  border-bottom:1px solid #e5e7eb;
-}
+header{ padding:20px 0; border-bottom:1px solid var(--line); }
 
-.header-inner{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
+.header-inner{ display:flex; justify-content:space-between; align-items:center; }
+.brand-wrap{ display:flex; align-items:center; gap:12px; }
+.logo{ width:38px; display:block; }
 
-.brand-wrap{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
-.logo{width:34px;}
-
-.brand-name-hi{
-  font-size:20px;
-  font-weight:700;
-  color:var(--primary);
-}
-
+.brand-name-hi{ font-size:22px; font-weight:700; color:var(--ink); line-height:1; }
 .brand-sub{
-  font-size:12px;
-  color:var(--muted);
+  font-size:11px; color:var(--muted); letter-spacing:.08em;
+  text-transform:uppercase; font-family:'JetBrains Mono',monospace; margin-top:4px;
 }
 
 .nav-links a{
-  margin-left:18px;
-  text-decoration:none;
-  color:var(--muted);
-  font-size:14px;
+  margin-left:26px; text-decoration:none; color:var(--muted);
+  font-size:14px; font-weight:500; border-bottom:1px solid transparent;
+  padding-bottom:2px; transition:.2s;
 }
-
-.nav-links a:hover{
-  color:var(--accent);
-}
+.nav-links a:hover{ color:var(--accent); border-bottom-color:var(--accent); }
 
 /* PAGE TITLE */
-.page-title{
-  text-align:center;
-  margin:60px 0 40px;
-}
-
+.page-title{ text-align:center; margin:64px 0 36px; }
 .page-title h1{
-  font-family:'Playfair Display',serif;
-  font-size:32px;
-  color:var(--primary);
+  font-family:'Fraunces',serif; font-size:32px; color:var(--ink); font-weight:600; margin:0;
 }
-
-.page-title p{
-  color:var(--muted);
-  margin-top:8px;
-}
+.page-title p{ color:var(--muted); margin-top:10px; font-size:15px; }
 
 /* CONTACT CARD */
 .contact-card{
-  background:#ffffff;
+  position:relative;
+  background:var(--card);
   padding:40px;
-  border-radius:10px;
-  box-shadow:0 8px 20px rgba(0,0,0,.06);
-  margin-bottom:50px;
+  border-radius:4px;
+  border:1px solid var(--line);
+  box-shadow:0 18px 40px rgba(28,37,65,.08);
+  margin-bottom:56px;
   text-align:center;
 }
 
-.contact-info{
-  margin-bottom:30px;
+.contact-card::before{
+  content:"";
+  position:absolute;
+  inset:8px;
+  border:1px solid var(--line);
+  border-radius:2px;
+  pointer-events:none;
 }
 
+.seal{
+  width:52px; height:52px; border-radius:50%;
+  border:2px solid var(--marigold);
+  display:flex; align-items:center; justify-content:center;
+  color:var(--marigold); font-family:'Noto Serif Devanagari',serif;
+  font-weight:700; font-size:19px; margin:0 auto 20px; transform:rotate(-6deg);
+}
+
+.contact-info{ margin-bottom:28px; }
 .contact-info h3{
-  margin-bottom:10px;
-  font-size:18px;
-  color:var(--primary);
+  margin-bottom:12px; font-size:19px; color:var(--ink);
+  font-family:'Fraunces',serif; font-weight:600;
 }
-
-.contact-info p{
-  margin:6px 0;
-  color:var(--muted);
+.contact-info p{ margin:6px 0; color:var(--muted); font-size:15px; }
+.contact-info .detail-row{
+  font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--ink);
 }
 
 /* BUTTONS */
 .btn{
-  display:inline-block;
-  padding:12px 24px;
-  margin:10px;
-  border-radius:6px;
-  background:var(--accent);
-  color:#fff;
-  text-decoration:none;
-  font-weight:600;
-  font-size:14px;
-  transition:.2s;
+  display:inline-block; padding:12px 24px; margin:8px;
+  border-radius:3px; background:var(--accent); color:#fff;
+  text-decoration:none; font-weight:600; font-size:14px;
+  transition:.2s; border:1px solid var(--accent);
 }
+.btn:hover{ background:var(--accent-dark); border-color:var(--accent-dark); transform:translateY(-1px); }
 
-.btn:hover{
-  background:#1d4ed8;
-}
-
-.btn-secondary{
-  background:#10b981;
-}
-
-.btn-secondary:hover{
-  background:#059669;
-}
+.btn-secondary{ background:#2f6f5e; border-color:#2f6f5e; }
+.btn-secondary:hover{ background:#255a4b; border-color:#255a4b; }
 
 /* FOOTER */
 footer{
-  text-align:center;
-  font-size:12px;
-  color:var(--muted);
-  padding:26px 0;
-  border-top:1px solid #e5e7eb;
-  background:#ffffff;
+  text-align:center; font-size:12px; color:var(--muted);
+  padding:26px 0; border-top:1px solid var(--line);
 }
 
-/* RESPONSIVE */
 @media(max-width:768px){
+  .header-inner{ flex-direction:column; gap:12px; }
+  .contact-card{ padding:26px; }
+  .btn{ width:100%; max-width:280px; }
+}
 
-  .header-inner{
-    flex-direction:column;
-    gap:10px;
-  }
-
-  .contact-card{
-    padding:25px;
-  }
-
-  .btn{
-    width:100%;
-    max-width:280px;
-  }
-
+@media (prefers-reduced-motion: reduce){
+  body{ animation:none; opacity:1; }
 }
 </style>
 </head>
@@ -182,16 +151,15 @@ footer{
 <header>
   <div class="container max header-inner">
     <div class="brand-wrap">
-      <img src="images/logo.png" class="logo">
+      <img src="images/logo.png" class="logo" alt="Upadhi Tuition Center logo">
       <div>
-        <div class="brand-name-hi">उपाधि</div>
-        <div class="brand-sub">Hindi Tuition Centre</div>
+        <div class="brand-name-hi devanagari">उपाधि</div>
+        <div class="brand-sub">Tuition Centre</div>
       </div>
     </div>
 
     <div class="nav-links">
       <a href="index.html">Home</a>
-      <a href="vacation-courses.html">Vacation</a>
     </div>
   </div>
 </header>
@@ -199,34 +167,33 @@ footer{
 <section class="container max">
 
   <div class="page-title">
-    <h1>Contact Us</h1>
-    <p>Admissions and inquiries are handled through our registration form.</p>
+    <h1>Contact us</h1>
+    <p>Admissions and enquiries are handled through our registration form.</p>
   </div>
 
   <div class="contact-card">
+    <div class="seal devanagari">उ</div>
 
     <div class="contact-info">
       <h3>Upadhi Tuition Center</h3>
-      <p>Structured Coaching for Hindi Prachar Sabha & Academic Support</p>
-      <p><strong>Phone:</strong> +91 96333 12986</p>
-      <p><strong>Exam Sessions:</strong> February & August</p>
+      <p>Structured coaching for Hindi Prachar Sabha examinations &amp; school tuition up to Class 10</p>
+      <p class="detail-row">PHONE: +91 96333 12986</p>
+      <p class="detail-row">HINDI EXAM SESSIONS: FEBRUARY &amp; AUGUST</p>
     </div>
 
-    <!-- Google Form CTA -->
     <a href="https://forms.gle/TJEXusctnzxcdh7J9" target="_blank" class="btn">
-      Open Registration Form
+      Open registration form
     </a>
 
     <a href="https://wa.me/919633312986" target="_blank" class="btn btn-secondary">
-      WhatsApp Directly
+      WhatsApp directly
     </a>
-
   </div>
 
 </section>
 
 <footer>
-  © 2026 Upadhi  Tuition Center • Structured Coaching • Trusted Guidance
+  © 2026 Upadhi Tuition Center • Structured Coaching • Trusted Guidance
 </footer>
 
 </body>
