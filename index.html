@@ -276,6 +276,51 @@ header{
 
 .feature-box p{ font-size:14px; color:var(--muted); margin:0; line-height:1.55; }
 
+/* PROGRAMS GALLERY */
+.programs{ padding:10px 0 60px; }
+
+.programs-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;
+}
+
+.program-card{
+  margin:0;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:4px;
+  padding:24px 22px 26px;
+  border-top:3px solid var(--pc-accent, var(--accent));
+  transition:.25s ease;
+}
+.program-card:hover{ transform:translateY(-4px); box-shadow:0 14px 28px rgba(28,37,65,.07); }
+
+.program-tag{
+  display:inline-block;
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  letter-spacing:.1em;
+  color:var(--pc-accent, var(--accent));
+  font-weight:600;
+  margin-bottom:12px;
+}
+
+.program-card h3{
+  font-family:'Fraunces',serif;
+  font-size:18px;
+  font-weight:600;
+  color:var(--ink);
+  margin:0 0 8px;
+}
+
+.program-card p{
+  font-size:14px;
+  color:var(--muted);
+  line-height:1.55;
+  margin:0;
+}
+
 /* LEVELS — real sequence, ordered path */
 .levels{ padding:20px 0 70px; }
 
@@ -389,12 +434,12 @@ footer{
 
 <section class="container max hero">
   <div>
-    <span class="mono-label hero-eyebrow">HINDI PRACHAR SABHA · SCHOOL TUITION</span>
+    <span class="mono-label hero-eyebrow">HINDI · ENGLISH · MALAYALAM · SCHOOL TUITION</span>
     <h1>Structured coaching for academic excellence</h1>
     <p>
-      Focused preparation for Hindi Prachar Sabha examinations and school
-      tuition up to Class 10, with small batches and individual attention
-      at every level.
+      Focused preparation for Hindi Prachar Sabha examinations, English and
+      Malayalam tuition, and school tuition up to Class 10, with small
+      batches and individual attention at every level.
     </p>
     <div class="hero-ctas">
       <a href="contact.html" class="btn">Enquire about admission</a>
@@ -445,6 +490,28 @@ footer{
       <span class="num">04</span>
       <h3>School tuition, up to Class 10</h3>
       <p>All-subject tuition support from primary grades through Class 10.</p>
+    </div>
+  </div>
+</section>
+
+<section class="container max programs">
+  <div class="section-label">What we teach</div>
+  <h2 class="section-heading">Our programs</h2>
+  <div class="programs-grid">
+    <div class="program-card" style="--pc-accent:var(--accent);">
+      <span class="program-tag">HINDI</span>
+      <h3>Hindi Prachar Sabha coaching</h3>
+      <p>Structured preparation across all six examination stages, from Prathmic through Praveen.</p>
+    </div>
+    <div class="program-card" style="--pc-accent:var(--marigold);">
+      <span class="program-tag">ENGLISH</span>
+      <h3>English tuition classes</h3>
+      <p>Reading, writing, grammar, vocabulary and speaking, built for concept clarity and confidence.</p>
+    </div>
+    <div class="program-card" style="--pc-accent:#2f6f5e;">
+      <span class="program-tag">MALAYALAM</span>
+      <h3>Malayalam tuition</h3>
+      <p>Letters, pronunciation, vocabulary and conversation, for KG through Class 12.</p>
     </div>
   </div>
 </section>
