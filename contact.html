@@ -3,229 +3,473 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact | Upadhi Tuition Center</title>
-<meta name="description" content="Contact Upadhi Tuition Center for admissions and enquiries about Hindi Prachar Sabha coaching and school tuition.">
+<title>Contact — Upadhi Tuition Center</title>
+<meta name="description" content="Contact Upadhi Tuition Center for admissions and enquiries about CBSE and State Board school subject tuition (arranged according to need) and Hindi Prachar Sabha coaching.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Noto+Serif+Devanagari:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
-:root{
-  --ink:#1c2541;
-  --paper:#f5efe0;
-  --card:#ffffff;
-  --accent:#b3472d;
-  --accent-dark:#8f3620;
-  --marigold:#c98a2c;
-  --muted:#6b6458;
-  --line:#ded2ba;
+/* ==========================================================================
+   SWISS MODERNISM 2.0 DESIGN SYSTEM — CONTACT
+   ========================================================================== */
+:root {
+  --black: #000000;
+  --white: #FFFFFF;
+  --gray: #F5F5F5;
+  --red: #DC2626;
+  --text-muted: #4B5563;
+  --rule: #E5E7EB;
 }
 
-*{box-sizing:border-box;}
-
-body{
-  margin:0;
-  font-family:'Inter',system-ui,sans-serif;
-  background:var(--paper);
-  color:var(--ink);
-  opacity:0;
-  animation:fadeIn .6s ease forwards;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-@keyframes fadeIn{ to{opacity:1;} }
-
-.container{padding:0 22px;}
-.max{max-width:900px;margin:auto;}
-
-.devanagari{ font-family:'Noto Serif Devanagari',serif; }
-.mono-label{
-  font-family:'JetBrains Mono',monospace;
-  font-size:11px;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  color:var(--accent);
-  font-weight:600;
+html {
+  font-size: 16px;
 }
 
-a{ color:inherit; }
-
-/* HEADER */
-header{ padding:20px 0; border-bottom:1px solid var(--line); }
-
-.header-inner{ display:flex; justify-content:space-between; align-items:center; }
-.brand-wrap{ display:flex; align-items:center; gap:12px; }
-.logo{ width:38px; display:block; }
-
-.brand-name-hi{ font-size:22px; font-weight:700; color:var(--ink); line-height:1; }
-.brand-sub{
-  font-size:11px; color:var(--muted); letter-spacing:.08em;
-  text-transform:uppercase; font-family:'JetBrains Mono',monospace; margin-top:4px;
+body {
+  background: var(--white);
+  color: var(--black);
+  font-family: "Helvetica Neue", Helvetica, Inter, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
-.nav-links a{
-  margin-left:26px; text-decoration:none; color:var(--muted);
-  font-size:14px; font-weight:500; border-bottom:1px solid transparent;
-  padding-bottom:2px; transition:.2s;
-}
-.nav-links a:hover{ color:var(--accent); border-bottom-color:var(--accent); }
+.devanagari { font-family: "Noto Sans Devanagari", sans-serif; }
+.mono { font-family: "JetBrains Mono", Menlo, monospace; }
 
-/* PAGE TITLE */
-.page-title{ text-align:center; margin:64px 0 36px; }
-.page-title h1{
-  font-family:'Fraunces',serif; font-size:32px; color:var(--ink); font-weight:600; margin:0;
-}
-.page-title p{ color:var(--muted); margin-top:10px; font-size:15px; }
-
-/* CONTACT CARD */
-.contact-card{
-  position:relative;
-  background:var(--card);
-  padding:40px;
-  border-radius:4px;
-  border:1px solid var(--line);
-  box-shadow:0 18px 40px rgba(28,37,65,.08);
-  margin-bottom:56px;
-  text-align:center;
+h1 {
+  font-size: 3.75rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.5rem 0;
 }
 
-.contact-card::before{
-  content:"";
-  position:absolute;
-  inset:8px;
-  border:1px solid var(--line);
-  border-radius:2px;
-  pointer-events:none;
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 1rem 0;
 }
 
-.seal{
-  width:52px; height:52px; border-radius:50%;
-  border:2px solid var(--marigold);
-  display:flex; align-items:center; justify-content:center;
-  color:var(--marigold); font-family:'Noto Serif Devanagari',serif;
-  font-weight:700; font-size:19px; margin:0 auto 20px; transform:rotate(-6deg);
+h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
 }
 
-.contact-info{ margin-bottom:28px; }
-.contact-info h3{
-  margin-bottom:12px; font-size:19px; color:var(--ink);
-  font-family:'Fraunces',serif; font-weight:600;
+.eyebrow {
+  color: var(--red);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: "JetBrains Mono", monospace;
+  display: block;
+  margin-bottom: 0.75rem;
 }
-.contact-info p{ margin:6px 0; color:var(--muted); font-size:15px; }
-.contact-info .detail-row{
-  font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--ink);
+
+.lead {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+}
+
+/* 12-COLUMN MATHEMATICAL GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  border-top: 1px solid var(--rule);
+}
+
+.grid--no-border {
+  border-top: none;
+}
+
+.grid > .main {
+  grid-column: span 8;
+}
+
+.grid > .aside {
+  grid-column: span 4;
 }
 
 /* BUTTONS */
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  padding:12px 24px; margin:8px;
-  border-radius:3px; background:var(--accent); color:#fff;
-  text-decoration:none; font-weight:600; font-size:14px;
-  transition:.2s; border:1px solid var(--accent);
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--black);
+  border-radius: 0;
+  background: var(--black);
+  color: var(--white);
+  font-family: "Helvetica Neue", Helvetica, Inter, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
-.btn:hover{ background:var(--accent-dark); border-color:var(--accent-dark); transform:translateY(-1px); }
 
-.btn svg{ flex-shrink:0; }
+.button--outline {
+  background: transparent;
+  color: var(--black);
+}
 
-.btn-call{ background:var(--marigold); border-color:var(--marigold); }
-.btn-call:hover{ background:#a8721f; border-color:#a8721f; }
+.button:hover {
+  background: var(--red);
+  border-color: var(--red);
+  color: var(--white);
+}
 
-.btn-secondary{ background:#2f6f5e; border-color:#2f6f5e; }
-.btn-secondary:hover{ background:#255a4b; border-color:#255a4b; }
+.button:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
+}
+
+/* HEADER */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--white);
+  border-bottom: 1px solid var(--black);
+}
+
+.header-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 1.25rem 2rem;
+  align-items: center;
+}
+
+.brand {
+  grid-column: span 6;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.brand:hover { color: var(--red); }
+
+.brand-seal {
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.125rem;
+  flex-shrink: 0;
+}
+
+.brand-title {
+  font-size: 1.125rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.brand-subtitle {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+.site-nav {
+  grid-column: span 6;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+.site-nav a {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--black);
+  transition: color 0.15s ease;
+}
+
+.site-nav a:hover { color: var(--red); }
+.site-nav a:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+
+/* CONTACT CARD (Swiss Modular Placard) */
+.contact-module {
+  background: var(--white);
+  border: 1px solid var(--black);
+  padding: 2.5rem;
+}
+
+.contact-meta-row {
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.contact-action-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.action-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem;
+  border: 1px solid var(--rule);
+  background: var(--gray);
+  gap: 1rem;
+}
+
+.action-row-text .ar-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--red);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.action-row-text .ar-title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-top: 0.25rem;
+}
+
+.action-row-text .ar-desc {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+/* ASIDE INFO */
+.aside-block {
+  background: var(--gray);
+  border: 1px solid var(--black);
+  border-top: 4px solid var(--red);
+  padding: 1.75rem 1.5rem;
+}
+
+.aside-row {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.aside-row:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.aside-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.25rem;
+}
+
+.aside-val {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--black);
+}
 
 /* FOOTER */
-footer{
-  text-align:center; font-size:12px; color:var(--muted);
-  padding:26px 0; border-top:1px solid var(--line);
+.site-footer {
+  border-top: 1px solid var(--black);
+  background: var(--white);
 }
 
-@media(max-width:768px){
-  .contact-card{ padding:26px; }
-  .btn{ width:100%; max-width:280px; }
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 2rem;
+  align-items: center;
 }
 
-@media(max-width:480px){
-  .container{ padding:0 16px; }
-  header{ padding:14px 0; }
-  .logo{ width:32px; }
-  .brand-name-hi{ font-size:19px; }
-  .brand-sub{ font-size:10px; }
-  .nav-links a{ font-size:13px; margin-left:16px; }
-
-  .page-title{ margin:40px 0 28px; }
-  .page-title h1{ font-size:26px; }
-  .page-title p{ font-size:14px; }
-
-  .contact-card{ padding:22px 18px; }
-  .seal{ width:44px; height:44px; font-size:16px; }
-  .contact-info h3{ font-size:17px; }
-  .contact-info p{ font-size:14px; }
-
-  .btn{ max-width:none; margin:6px 0; }
+.footer-left {
+  grid-column: span 6;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
 }
 
-@media (prefers-reduced-motion: reduce){
-  body{ animation:none; opacity:1; }
+.footer-right {
+  grid-column: span 6;
+  text-align: right;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  .grid, .header-grid, .footer-grid {
+    padding: 2.5rem 1.25rem;
+    gap: 1.5rem;
+  }
+  .grid > .main, .grid > .aside, .brand, .site-nav, .footer-left, .footer-right {
+    grid-column: 1 / -1;
+  }
+  h1 { font-size: 2.5rem; }
+  .site-nav { justify-content: flex-start; gap: 1.25rem; flex-wrap: wrap; }
+  .action-row { flex-direction: column; align-items: flex-start; }
+  .action-row .button { width: 100%; }
+  .footer-right { text-align: left; }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <div class="container max header-inner">
-    <div class="brand-wrap">
-      <img src="images/logo.png" class="logo" alt="Upadhi Tuition Center logo">
+<header class="site-header">
+  <div class="header-grid">
+    <a href="index.html" class="brand" aria-label="Upadhi Tuition Center Home">
+      <div class="brand-seal devanagari">उ</div>
       <div>
-        <div class="brand-name-hi devanagari">उपाधि</div>
-        <div class="brand-sub">Tuition Centre</div>
+        <div class="brand-title">UPADHI TUITION</div>
+        <div class="brand-subtitle">CBSE &amp; State Tuition · Hindi Prachar Sabha Coaching</div>
       </div>
-    </div>
+    </a>
 
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-    </div>
+    <nav class="site-nav" aria-label="Main Navigation">
+      <a href="index.html">00. Home</a>
+      <a href="index.html#tuition-programs">01. Programs</a>
+      <a href="index.html#examination-path">02. Exam Path</a>
+      <a href="contact.html" style="color:var(--red);">03. Contact</a>
+    </nav>
   </div>
 </header>
 
-<section class="container max">
+<main>
+  <section class="grid grid--no-border">
+    <div class="main">
+      <span class="eyebrow">COMMUNICATION &amp; ADMISSIONS</span>
+      <h1>Contact us.</h1>
+      <p class="lead">
+        Admissions for CBSE &amp; State Board subject tuition and Hindi Prachar Sabha examination batches are processed through our formal registration desk and direct consultation channels.
+      </p>
 
-  <div class="page-title">
-    <h1>Contact us</h1>
-    <p>Admissions and enquiries are handled through our registration form.</p>
-  </div>
+      <div class="contact-module">
+        <div class="contact-meta-row">
+          <span class="eyebrow">INSTITUTION DIRECTORY</span>
+          <h2>Upadhi Tuition Center</h2>
+          <p style="color:var(--text-muted);font-size:0.9375rem;margin:0;">
+            CBSE &amp; State Board school subject tuition (Class 1 to 10, tailored according to need) and structured coaching across all 9 Hindi Prachar Sabha examination stages.
+          </p>
+        </div>
 
-  <div class="contact-card">
-    <div class="seal devanagari">उ</div>
+        <div class="contact-action-list">
+          <!-- Primary Form -->
+          <div class="action-row">
+            <div class="action-row-text">
+              <div class="ar-label">Option 01 · Online Intake</div>
+              <div class="ar-title">Formal Registration Form</div>
+              <div class="ar-desc">Submit student grade, board (CBSE / State), subject requirements, and preferred schedule.</div>
+            </div>
+            <a href="https://forms.gle/TJEXusctnzxcdh7J9" target="_blank" rel="noopener noreferrer" class="button">
+              Open Form →
+            </a>
+          </div>
 
-    <div class="contact-info">
-      <h3>Upadhi Tuition Center</h3>
-      <p>Structured coaching for Hindi Prachar Sabha examinations &amp; school tuition up to Class 10</p>
-      <p class="detail-row">HINDI EXAM SESSIONS: FEBRUARY &amp; AUGUST</p>
+          <!-- Phone -->
+          <div class="action-row">
+            <div class="action-row-text">
+              <div class="ar-label">Option 02 · Voice Call</div>
+              <div class="ar-title">+91 96333 12986</div>
+              <div class="ar-desc">Direct inquiry for custom subject scheduling, batch timings, and faculty consultation.</div>
+            </div>
+            <a href="tel:+919633312986" class="button button--outline">
+              Call Direct
+            </a>
+          </div>
+
+          <!-- WhatsApp -->
+          <div class="action-row">
+            <div class="action-row-text">
+              <div class="ar-label">Option 03 · Instant Message</div>
+              <div class="ar-title">WhatsApp Verification</div>
+              <div class="ar-desc">Quick questions on board syllabus support, timetable flexibility, and Hindi exam stages.</div>
+            </div>
+            <a href="https://wa.me/919633312986" target="_blank" rel="noopener noreferrer" class="button button--outline">
+              Message WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <a href="https://forms.gle/TJEXusctnzxcdh7J9" target="_blank" class="btn">
-      Open registration form
-    </a>
+    <aside class="aside">
+      <div class="aside-block">
+        <div class="aside-row">
+          <div class="aside-label">Admission Status</div>
+          <div class="aside-val" style="color:var(--red);">Admissions Open</div>
+        </div>
+        <div class="aside-row">
+          <div class="aside-label">School Tuition</div>
+          <div class="aside-val">CBSE &amp; State Board (Class 1–10)</div>
+        </div>
+        <div class="aside-row">
+          <div class="aside-label">Class Schedule</div>
+          <div class="aside-val">Tailored According to Need</div>
+        </div>
+        <div class="aside-row">
+          <div class="aside-label">Hindi Exam Stages</div>
+          <div class="aside-val">All 9 Stages (Parichaya to Praveen)</div>
+        </div>
+        <div class="aside-row">
+          <div class="aside-label">Batch Structure</div>
+          <div class="aside-val">Small Batches · Individual Focus</div>
+        </div>
+      </div>
+    </aside>
+  </section>
+</main>
 
-    <a href="tel:+919633312986" class="btn btn-call">
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      Call us
-    </a>
-
-    <a href="https://wa.me/919633312986" target="_blank" class="btn btn-secondary">
-      WhatsApp directly
-    </a>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-left">
+      © 2026 Upadhi Tuition Center. All rights reserved.
+    </div>
+    <div class="footer-right">
+      CBSE &amp; STATE BOARD TUITION · DAKSHIN BHARAT HINDI PRACHAR SABHA COACHING
+    </div>
   </div>
-
-</section>
-
-<footer>
-  © 2026 Upadhi Tuition Center • Structured Coaching • Trusted Guidance
 </footer>
 
 </body>

@@ -3,309 +3,529 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Registration — Upadhi Tuition Center</title>
 
-<title>Registration | Upadhi Tuition</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
+/* ==========================================================================
+   SWISS MODERNISM 2.0 DESIGN SYSTEM — REGISTRATION
+   ========================================================================== */
 :root {
-  --primary:#1e293b;
-  --accent:#3b82f6;
-  --bg:#f8fafc;
-  --text:#0f172a;
-  --muted:#64748b;
-  --paper:#fbfdff;
-  --line:#e6edf7;
-  --margin:#f87171;
+  --black: #000000;
+  --white: #FFFFFF;
+  --gray: #F5F5F5;
+  --red: #DC2626;
+  --text-muted: #4B5563;
+  --rule: #E5E7EB;
 }
 
-/* BODY */
-body{
-  margin:0;
-  font-family:'Inter',sans-serif;
-  background:linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
-  animation:fadeIn .4s ease;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
-@keyframes fadeIn{
-  from{opacity:0;transform:translateY(10px)}
-  to{opacity:1;transform:translateY(0)}
+
+body {
+  background: var(--white);
+  color: var(--black);
+  font-family: "Helvetica Neue", Helvetica, Inter, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.devanagari { font-family: "Noto Sans Devanagari", sans-serif; }
+.mono { font-family: "JetBrains Mono", monospace; }
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 1rem 0;
+}
+
+.eyebrow {
+  color: var(--red);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: "JetBrains Mono", monospace;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.lead {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+}
+
+/* 12-COLUMN MATHEMATICAL GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  border-top: 1px solid var(--rule);
+}
+
+.grid--no-border {
+  border-top: none;
+}
+
+.grid > .main {
+  grid-column: span 8;
+}
+
+.grid > .aside {
+  grid-column: span 4;
 }
 
 /* HEADER */
-header{
-  background:#fff;
-  padding:14px;
-  border-bottom:1px solid #e5e7eb;
-  text-align:center;
-  font-weight:600;
-  position:sticky;
-  top:0;
-  z-index:10;
-  box-shadow:0 6px 18px rgba(15, 23, 42, .06);
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--white);
+  border-bottom: 1px solid var(--black);
 }
 
-@media (max-width: 640px){
-  header{
-    padding:12px 10px;
-    font-size:14px;
-  }
+.header-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 1.25rem 2rem;
+  align-items: center;
 }
 
-/* NOTEBOOK */
-.form-page{
-  max-width:700px;
-  margin:30px auto;
-  background:
-    repeating-linear-gradient(to bottom,
-      var(--paper),
-      var(--paper) 28px,
-      var(--line) 29px);
-  padding:35px 25px 40px 65px;
-  border-radius:12px;
-  position:relative;
-  box-shadow:0 12px 30px rgba(0,0,0,.08);
+.brand {
+  grid-column: span 6;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: var(--black);
 }
 
-@media (max-width: 640px){
-  .form-page{
-    margin:12px;
-    padding:20px 14px 22px 14px;
-    background:#fff;
-  }
-  .form-page::before{
-    display:none;
-  }
-  h1{
-    font-size:24px;
-    margin-bottom:10px;
-  }
+.brand:hover { color: var(--red); }
+
+.brand-seal {
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.125rem;
+  flex-shrink: 0;
 }
 
-@media (max-width: 380px){
-  .form-page{
-    margin:10px;
-    padding:18px 12px 20px 12px;
-  }
+.brand-title {
+  font-size: 1.125rem;
+  font-weight: 800;
+  line-height: 1;
 }
 
-.form-page::before{
-  content:"";
-  position:absolute;
-  left:45px;
-  top:0;
-  width:2px;
-  height:100%;
-  background:var(--margin);
+.brand-subtitle {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
 }
 
-/* TITLE */
-h1{
-  font-family:'Playfair Display',serif;
-  font-size:26px;
-  margin-bottom:15px;
-  color:var(--text);
+.site-nav {
+  grid-column: span 6;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
 }
 
-form{
-  margin-top:10px;
+.site-nav a {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--black);
+  transition: color 0.15s ease;
 }
 
-label{
-  display:block;
-  margin:10px 0 6px;
-  color:var(--text);
-  font-weight:500;
-  font-size:14px;
+.site-nav a:hover { color: var(--red); }
+
+/* FORM CONTAINER (Swiss International Placard) */
+.form-box {
+  background: var(--white);
+  border: 1px solid var(--black);
+  padding: 2.5rem;
 }
 
-/* LABEL */
-.label{
-  font-size:11px;
-  text-transform:uppercase;
-  color:var(--muted);
-  margin-top:22px;
-  margin-bottom:6px;
-  letter-spacing:1px;
+.form-section-title {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--red);
+  margin: 1.75rem 0 0.75rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--rule);
 }
 
-/* INPUT */
-input, select, textarea{
-  width:100%;
-  padding:11px;
-  border:1px solid #e5e7eb;
-  border-radius:8px;
-  margin-bottom:12px;
-  font-size:14px;
-  transition:.2s;
-  background:#fff;
+.form-section-title:first-of-type {
+  margin-top: 0;
 }
 
-textarea{
-  min-height:100px;
-  resize:vertical;
+label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin: 1rem 0 0.375rem 0;
+  color: var(--black);
 }
 
-input:hover, textarea:hover{
-  border-color:#cbd5f5;
+input[type="text"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 0.75rem 0.875rem;
+  border: 1px solid var(--black);
+  border-radius: 0;
+  background: var(--white);
+  color: var(--black);
+  font-family: "Helvetica Neue", Helvetica, Inter, Arial, sans-serif;
+  font-size: 0.9375rem;
+  margin-bottom: 0.5rem;
+  transition: border-color 0.15s ease;
 }
 
-input:focus, textarea:focus{
-  border-color:var(--accent);
-  box-shadow:0 0 0 2px rgba(59,130,246,.15);
-  outline:none;
+input:focus, textarea:focus {
+  outline: 2px solid var(--red);
+  outline-offset: 2px;
 }
 
-/* CHECKBOX */
-.checkbox-group{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
+textarea {
+  min-height: 90px;
+  resize: vertical;
 }
 
-.checkbox-group label{
-  display:inline-flex;
-  align-items:center;
-  margin:0;
-  font-weight:500;
-  position:relative;
+/* CHECKBOX GROUP (Modular Swiss Selectors) */
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
-.checkbox-group input{
-  position:absolute;
-  opacity:0;
-  pointer-events:none;
-  width:0;
-  height:0;
+.checkbox-group label {
+  margin: 0;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
 }
 
-.checkbox-group span{
-  background:#fff;
-  padding:8px 12px;
-  border-radius:999px;
-  font-size:13px;
-  border:1px solid #e5e7eb;
-  cursor:pointer;
-  transition:.2s;
-  user-select:none;
+.checkbox-group input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
 }
 
-.checkbox-group label:hover span{
-  background:#eff6ff;
-  border-color:var(--accent);
+.checkbox-group span {
+  display: block;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--black);
+  border-radius: 0;
+  background: var(--white);
+  color: var(--black);
+  font-size: 0.8125rem;
+  font-family: "JetBrains Mono", monospace;
+  transition: all 0.15s ease;
 }
 
-.checkbox-group input:checked + span{
-  background:rgba(59,130,246,.12);
-  border-color:rgba(59,130,246,.55);
+.checkbox-group label:hover span {
+  background: var(--gray);
+}
+
+.checkbox-group input:checked + span {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+
+.checkbox-group input:focus-visible + span {
+  outline: 2px solid var(--red);
+  outline-offset: 2px;
 }
 
 /* BUTTON */
-button{
-  margin-top:25px;
-  width:100%;
-  padding:13px;
-  background:#25D366;
-  border:none;
-  color:#fff;
-  font-weight:600;
-  border-radius:8px;
-  cursor:pointer;
-  font-size:15px;
-  transition:.2s;
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  border: 1px solid var(--black);
+  border-radius: 0;
+  background: var(--black);
+  color: var(--white);
+  font-family: "Helvetica Neue", Helvetica, Inter, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  width: 100%;
+  margin-top: 1.5rem;
 }
 
-button:hover{
-  background:#1ebe5d;
-  transform:translateY(-1px);
+.button:hover {
+  background: var(--red);
+  border-color: var(--red);
+  color: var(--white);
 }
 
-button:active{
-  transform:scale(.98);
+.button:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
+}
+
+/* ASIDE INSTRUCTIONS */
+.aside-card {
+  background: var(--gray);
+  border: 1px solid var(--black);
+  border-top: 4px solid var(--red);
+  padding: 1.75rem 1.5rem;
+}
+
+.aside-card h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.75rem;
+}
+
+.aside-card p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.aside-card ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.aside-card li {
+  margin-bottom: 0.5rem;
+}
+
+/* FOOTER */
+.site-footer {
+  border-top: 1px solid var(--black);
+  background: var(--white);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 2rem;
+  align-items: center;
+}
+
+.footer-left {
+  grid-column: span 6;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.footer-right {
+  grid-column: span 6;
+  text-align: right;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  .grid, .header-grid, .footer-grid {
+    padding: 2.5rem 1.25rem;
+    gap: 1.5rem;
+  }
+  .grid > .main, .grid > .aside, .brand, .site-nav, .footer-left, .footer-right {
+    grid-column: 1 / -1;
+  }
+  .checkbox-group {
+    grid-template-columns: 1fr;
+  }
+  .form-box {
+    padding: 1.5rem;
+  }
+  .footer-right {
+    text-align: left;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<header>Upadhi Tuition Center – Registration</header>
+<header class="site-header">
+  <div class="header-grid">
+    <a href="index.html" class="brand" aria-label="Upadhi Tuition Center Home">
+      <div class="brand-seal devanagari">उ</div>
+      <div>
+        <div class="brand-title">UPADHI TUITION</div>
+        <div class="brand-subtitle">CBSE &amp; State Tuition · Hindi Prachar Sabha Coaching</div>
+      </div>
+    </a>
 
-<div class="form-page">
+    <nav class="site-nav" aria-label="Main Navigation">
+      <a href="index.html">← Back to Home</a>
+      <a href="contact.html">Contact Directory</a>
+    </nav>
+  </div>
+</header>
 
-<h1>Student Registration</h1>
+<main>
+  <section class="grid grid--no-border">
+    <div class="main">
+      <span class="eyebrow">ENROLLMENT INTAKE</span>
+      <h1>Student registration.</h1>
+      <p class="lead">
+        Submit candidate details below. Submitting generates an encoded, structured intake dossier and delivers it directly to our administration desk via WhatsApp.
+      </p>
 
-<form id="form">
+      <div class="form-box">
+        <form id="form">
 
-<div class="label">Parent Details</div>
-<label>Guardian Name *</label>
-<input type="text" id="guardian" required>
+          <div class="form-section-title">01 / Guardian Identification</div>
+          <label for="guardian">Guardian Full Name *</label>
+          <input type="text" id="guardian" required placeholder="Parent or legal guardian name">
 
-<label>Phone Number *</label>
-<input type="text" id="phone" required>
+          <label for="phone">Primary Phone Number *</label>
+          <input type="tel" id="phone" required placeholder="e.g. 9633312986">
 
-<label>Additional Phone Number</label>
-<input type="text" id="phone2">
+          <label for="phone2">Secondary Contact Number</label>
+          <input type="tel" id="phone2" placeholder="Optional backup contact">
 
-<div class="label">Student Details</div>
-<label>Student Name *</label>
-<input type="text" id="student" required>
-<label>Class / Grade</label>
-<input type="text" id="class">
-<label>School Name</label>
-<input type="text" id="school">
+          <div class="form-section-title">02 / Candidate Information</div>
+          <label for="student">Student Full Name *</label>
+          <input type="text" id="student" required placeholder="Candidate legal name">
 
-<div class="label">Course</div>
-<div class="checkbox-group course-options" id="course">
-  <label>
-    <input type="checkbox" name="course" value="School Tuition">
-    <span>School Tuition</span>
-  </label>
-  <label>
-    <input type="checkbox" name="course" value="Hindi Prachar Exams">
-    <span>Hindi Prachar Exams</span>
-  </label>
-  <label>
-    <input type="checkbox" name="course" value="Vacation Classes">
-    <span>Vacation Classes</span>
-  </label>
-</div>
+          <label for="class">Current Academic Grade / Class</label>
+          <input type="text" id="class" placeholder="e.g. Class 7 or Class 10">
 
-<div class="label">Additional Info</div>
-<textarea id="notes" placeholder="Any notes or special attention"></textarea>
+          <label for="school">School or Institution</label>
+          <input type="text" id="school" placeholder="Current school and curriculum affiliation">
 
-<button type="submit">Submit Application</button>
+          <div class="form-section-title">03 / Program Selection</div>
+          <div class="checkbox-group course-options">
+            <label>
+              <input type="checkbox" name="course" value="CBSE Subject Tuition (Class 1-10)">
+              <span>CBSE Subject Tuition (Class 1–10)</span>
+            </label>
+            <label>
+              <input type="checkbox" name="course" value="State Board Subject Tuition (Class 1-10)">
+              <span>State Board Tuition (Class 1–10)</span>
+            </label>
+            <label>
+              <input type="checkbox" name="course" value="Hindi Prachar Sabha Exams (All 9 Stages)">
+              <span>Hindi Prachar Sabha (9 Stages)</span>
+            </label>
+            <label>
+              <input type="checkbox" name="course" value="Language Proficiency (English / Malayalam)">
+              <span>English / Malayalam Tuition</span>
+            </label>
+          </div>
 
-</form>
+          <div class="form-section-title">04 / Subject Needs &amp; Schedule Preferences</div>
+          <label for="notes">Subjects Needed &amp; Additional Information</label>
+          <textarea id="notes" placeholder="Specify subjects needed (e.g. Maths, Science, Social, Hindi, English), board, school exam dates, or specific weak areas..."></textarea>
 
-</div>
+          <button type="submit" class="button">
+            Transmit Application via WhatsApp →
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <aside class="aside">
+      <div class="aside-card">
+        <span class="eyebrow">SUBMISSION PROTOCOL</span>
+        <h3>Direct Verification</h3>
+        <p>
+          Submitting this form prepares an encoded, standardized registration payload and routes it directly to Upadhi Tuition administration.
+        </p>
+        <ul>
+          <li><strong>Need-Based Scheduling:</strong> Subject tuition scheduled according to your student's syllabus and difficulty areas.</li>
+          <li><strong>CBSE &amp; State Boards:</strong> Curriculum-aligned test prep and doubt clearing.</li>
+          <li><strong>Hindi Exam Cycles:</strong> Structured guidance for February and August sessions.</li>
+        </ul>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-left">
+      © 2026 Upadhi Tuition Center. All rights reserved.
+    </div>
+    <div class="footer-right">
+      CBSE &amp; STATE BOARD TUITION · DAKSHIN BHARAT HINDI PRACHAR SABHA COACHING
+    </div>
+  </div>
+</footer>
 
 <script>
 document.getElementById("form").addEventListener("submit", function(e){
   e.preventDefault();
 
-  const guardian = document.getElementById('guardian');
-  const phone = document.getElementById('phone');
-  const phone2 = document.getElementById('phone2');
-  const student = document.getElementById('student');
-  const classEl = document.getElementById('class');
-  const school = document.getElementById('school');
-  const notes = document.getElementById('notes');
+  const guardian = document.getElementById('guardian').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const phone2 = document.getElementById('phone2').value.trim();
+  const student = document.getElementById('student').value.trim();
+  const classEl = document.getElementById('class').value.trim();
+  const school = document.getElementById('school').value.trim();
+  const notes = document.getElementById('notes').value.trim();
 
-  let courses=[];
+  let courses = [];
   document.querySelectorAll('.course-options input[type="checkbox"]:checked')
-    .forEach(el=>courses.push(el.value));
+    .forEach(el => courses.push(el.value));
 
-  let msg=`*New Registration*%0A
-Guardian: ${guardian.value}%0A
-Phone: ${phone.value}%0A
-${phone2.value ? `Additional Phone: ${phone2.value}%0A` : ''}
-Student: ${student.value}%0A
-Class: ${classEl.value}%0A
-School: ${school.value}%0A
-Course: ${courses.join(", ")}%0A
-Notes: ${notes.value}`;
+  const lines = [
+    "*NEW CANDIDATE ADMISSION INTAKE*",
+    `Guardian: ${guardian}`,
+    `Phone: ${phone}`,
+    phone2 ? `Additional Contact: ${phone2}` : null,
+    `Candidate: ${student}`,
+    classEl ? `Grade: ${classEl}` : null,
+    school ? `Institution: ${school}` : null,
+    courses.length ? `Programs: ${courses.join(", ")}` : "Programs: CBSE / State / Hindi Tuition Enquiry",
+    notes ? `Subject Needs & Notes: ${notes}` : null
+  ].filter(Boolean).join("\n");
 
-  window.open(`https://wa.me/919633312986?text=${msg}`, '_blank');
+  window.location.href = `https://wa.me/919633312986?text=${encodeURIComponent(lines)}`;
 });
 </script>
 

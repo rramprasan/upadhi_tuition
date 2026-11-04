@@ -3,596 +3,1440 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Upadhi Tuition Center — Hindi Prachar Sabha Coaching</title>
-<meta name="description" content="Structured coaching for Hindi Prachar Sabha examinations and school tuition, with small batches and individual attention. Sessions every February and August.">
+<title>Upadhi Tuition Center — CBSE &amp; State Board Tuition | Hindi Prachar Sabha Coaching</title>
+<meta name="description" content="Structured coaching for CBSE and State Board school subject tuition up to Class 10 (arranged according to student need), language tuition, and all 9 stages of Dakshin Bharat Hindi Prachar Sabha examinations.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Noto+Serif+Devanagari:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
-:root{
-  --ink:#1c2541;
-  --paper:#f5efe0;
-  --card:#ffffff;
-  --accent:#b3472d;
-  --accent-dark:#8f3620;
-  --marigold:#c98a2c;
-  --muted:#6b6458;
-  --line:#ded2ba;
+/* ==========================================================================
+   SWISS MODERNISM 2.0 DESIGN SYSTEM
+   Grid system, Helvetica / Inter, Modular, Asymmetric, International, Rational
+   ========================================================================== */
+:root {
+  --black: #000000;
+  --white: #FFFFFF;
+  --gray: #F5F5F5;
+  --red: #DC2626;
+  --text-muted: #4B5563;
+  --rule: #E5E7EB;
 }
 
-*{box-sizing:border-box;}
-
-body{
-  margin:0;
-  font-family:'Inter',system-ui,sans-serif;
-  background:var(--paper);
-  color:var(--ink);
-  opacity:0;
-  animation:fadeIn .6s ease forwards;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-@keyframes fadeIn{ to{opacity:1;} }
-
-.container{padding:0 22px;}
-.max{max-width:1120px;margin:auto;}
-
-.devanagari{ font-family:'Noto Serif Devanagari',serif; }
-.display{ font-family:'Fraunces',serif; }
-.mono-label{
-  font-family:'JetBrains Mono',monospace;
-  font-size:11px;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  color:var(--accent);
-  font-weight:600;
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
 }
 
-a{ color:inherit; }
-
-/* HEADER */
-header{
-  padding:20px 0;
-  border-bottom:1px solid var(--line);
+body {
+  background: var(--white);
+  color: var(--black);
+  font-family: "Helvetica Neue", Helvetica, Inter, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
-.header-inner{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+/* TYPOGRAPHY */
+.devanagari {
+  font-family: "Noto Sans Devanagari", sans-serif;
 }
 
-.brand-wrap{ display:flex; align-items:center; gap:12px; }
-.logo{ width:38px; display:block; }
-
-.brand-name-hi{
-  font-size:22px;
-  font-weight:700;
-  color:var(--ink);
-  line-height:1;
+.mono {
+  font-family: "JetBrains Mono", Menlo, Consolas, monospace;
 }
 
-.brand-sub{
-  font-size:11px;
-  color:var(--muted);
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  font-family:'JetBrains Mono',monospace;
-  margin-top:4px;
+h1 {
+  font-size: 3.75rem;
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  margin: 0 0 1.5rem 0;
 }
 
-.nav-links a{
-  margin-left:26px;
-  text-decoration:none;
-  color:var(--muted);
-  font-size:14px;
-  font-weight:500;
-  border-bottom:1px solid transparent;
-  padding-bottom:2px;
-  transition:.2s;
-}
-.nav-links a:hover{ color:var(--accent); border-bottom-color:var(--accent); }
-
-/* HERO */
-.hero{
-  padding:76px 0 60px;
-  display:grid;
-  grid-template-columns:1.05fr .95fr;
-  gap:56px;
-  align-items:center;
+h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 1rem 0;
 }
 
-.hero-eyebrow{
-  display:inline-block;
-  margin-bottom:18px;
+h3 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.5rem 0;
 }
 
-.hero h1{
-  font-size:40px;
-  line-height:1.15;
-  margin:0 0 18px;
-  color:var(--ink);
-  font-weight:600;
+h4 {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 0.25rem 0;
 }
 
-.hero p{
-  font-size:16px;
-  line-height:1.6;
-  color:var(--muted);
-  margin:0 0 30px;
-  max-width:46ch;
+p {
+  margin: 0 0 1rem 0;
 }
 
-.hero-ctas{ display:flex; gap:12px; flex-wrap:wrap; }
+.eyebrow {
+  color: var(--red);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: "JetBrains Mono", monospace;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.lead {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+}
+
+/* 12-COLUMN MATHEMATICAL GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  border-top: 1px solid var(--rule);
+}
+
+.grid--no-border {
+  border-top: none;
+}
+
+.grid > .main {
+  grid-column: span 8;
+}
+
+.grid > .aside {
+  grid-column: span 4;
+}
+
+.col-12 { grid-column: span 12; }
+.col-8  { grid-column: span 8; }
+.col-6  { grid-column: span 6; }
+.col-4  { grid-column: span 4; }
+.col-3  { grid-column: span 3; }
 
 /* BUTTONS */
-.btn{
-  display:inline-block;
-  padding:12px 24px;
-  border-radius:3px;
-  background:var(--accent);
-  color:#fff;
-  text-decoration:none;
-  font-weight:600;
-  font-size:14px;
-  transition:.2s;
-  border:1px solid var(--accent);
-}
-.btn:hover{ background:var(--accent-dark); border-color:var(--accent-dark); transform:translateY(-1px); }
-
-.btn-ghost{
-  background:transparent;
-  color:var(--ink);
-  border:1px solid var(--line);
-}
-.btn-ghost:hover{ border-color:var(--ink); background:transparent; transform:none; }
-
-/* REGISTER CARD — signature element */
-.register-card{
-  position:relative;
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:4px;
-  padding:28px 26px 24px;
-  box-shadow:0 18px 40px rgba(28,37,65,.08);
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--black);
+  border-radius: 0;
+  background: var(--black);
+  color: var(--white);
+  font-family: "Helvetica Neue", Helvetica, Inter, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 
-.register-card::before{
-  content:"";
-  position:absolute;
-  inset:8px;
-  border:1px solid var(--line);
-  border-radius:2px;
-  pointer-events:none;
+.button--outline {
+  background: transparent;
+  color: var(--black);
 }
 
-.register-head{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
-  margin-bottom:18px;
-  padding-bottom:14px;
-  border-bottom:1px dashed var(--line);
+.button:hover {
+  background: var(--red);
+  border-color: var(--red);
+  color: var(--white);
 }
 
-.register-head .mono-label{ display:block; margin-bottom:6px; }
-
-.seal{
-  width:56px;
-  height:56px;
-  border-radius:50%;
-  border:2px solid var(--marigold);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:var(--marigold);
-  font-family:'Noto Serif Devanagari',serif;
-  font-weight:700;
-  font-size:20px;
-  flex-shrink:0;
-  transform:rotate(-8deg);
+.button:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
 }
 
-.register-title{
-  font-size:17px;
-  font-weight:600;
-  color:var(--ink);
-  font-family:'Fraunces',serif;
+/* HEADER */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--white);
+  border-bottom: 1px solid var(--black);
 }
 
-.register-image{
-  border-radius:3px;
-  overflow:hidden;
-  margin-bottom:16px;
-  border:1px solid var(--line);
-}
-.register-image img{ width:100%; display:block; }
-
-.register-foot{
-  display:flex;
-  justify-content:space-between;
-  font-size:12px;
-  color:var(--muted);
-  font-family:'JetBrains Mono',monospace;
+.header-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 1.25rem 2rem;
+  align-items: center;
 }
 
-/* SECTION DIVIDER */
-.section-divider{
-  height:1px;
-  background:var(--line);
+.brand {
+  grid-column: span 6;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: var(--black);
 }
 
-/* FEATURES */
-.features{ padding:64px 0; }
-
-.section-label{
-  font-family:'JetBrains Mono',monospace;
-  font-size:12px;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-  color:var(--accent);
-  margin-bottom:10px;
+.brand:hover {
+  color: var(--red);
 }
 
-.section-heading{
-  font-family:'Fraunces',serif;
-  font-size:26px;
-  color:var(--ink);
-  margin:0 0 36px;
-  font-weight:600;
+.brand-seal {
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.125rem;
+  flex-shrink: 0;
 }
 
-.feature-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-  gap:24px;
+.brand-title {
+  font-size: 1.125rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.01em;
 }
 
-.feature-box{
-  background:var(--card);
-  padding:26px 24px;
-  border-radius:4px;
-  border:1px solid var(--line);
-  transition:.25s ease;
-}
-.feature-box:hover{ transform:translateY(-4px); box-shadow:0 14px 28px rgba(28,37,65,.07); }
-
-.feature-box .num{
-  font-family:'JetBrains Mono',monospace;
-  color:var(--marigold);
-  font-size:13px;
-  margin-bottom:10px;
-  display:block;
+.brand-subtitle {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
 }
 
-.feature-box h3{
-  font-family:'Fraunces',serif;
-  color:var(--ink);
-  margin:0 0 8px;
-  font-size:18px;
-  font-weight:600;
+.site-nav {
+  grid-column: span 6;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
 }
 
-.feature-box p{ font-size:14px; color:var(--muted); margin:0; line-height:1.55; }
-
-/* PROGRAMS GALLERY */
-.programs{ padding:10px 0 60px; }
-
-.programs-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:24px;
+.site-nav a {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--black);
+  transition: color 0.15s ease;
 }
 
-.program-card{
-  margin:0;
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:4px;
-  padding:24px 22px 26px;
-  border-top:3px solid var(--pc-accent, var(--accent));
-  transition:.25s ease;
-}
-.program-card:hover{ transform:translateY(-4px); box-shadow:0 14px 28px rgba(28,37,65,.07); }
-
-.program-tag{
-  display:inline-block;
-  font-family:'JetBrains Mono',monospace;
-  font-size:11px;
-  letter-spacing:.1em;
-  color:var(--pc-accent, var(--accent));
-  font-weight:600;
-  margin-bottom:12px;
+.site-nav a:hover {
+  color: var(--red);
 }
 
-.program-card h3{
-  font-family:'Fraunces',serif;
-  font-size:18px;
-  font-weight:600;
-  color:var(--ink);
-  margin:0 0 8px;
+.site-nav a:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
 }
 
-.program-card p{
-  font-size:14px;
-  color:var(--muted);
-  line-height:1.55;
-  margin:0;
+/* HERO SECTION */
+.hero-ctas {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
-/* LEVELS — real sequence, ordered path */
-.levels{ padding:20px 0 70px; }
-
-.levels-path{
-  display:flex;
-  align-items:stretch;
-  border:1px solid var(--line);
-  border-radius:4px;
-  overflow:hidden;
-  background:var(--card);
+/* ASIDE LEDGER (Swiss Modernist Information Placard) */
+.swiss-ledger {
+  background: var(--gray);
+  border: 1px solid var(--black);
+  border-top: 4px solid var(--red);
+  padding: 1.75rem 1.5rem;
 }
 
-.level-step{
-  flex:1;
-  padding:20px 10px;
-  text-align:center;
-  position:relative;
-  border-right:1px dashed var(--line);
-}
-.level-step:last-child{ border-right:none; }
-
-.level-step .step-index{
-  font-family:'JetBrains Mono',monospace;
-  font-size:10px;
-  color:var(--marigold);
-  display:block;
-  margin-bottom:8px;
+.ledger-header {
+  border-bottom: 1px solid var(--black);
+  padding-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
-.level-step .step-name{
-  font-family:'Fraunces',serif;
-  font-size:14px;
-  font-weight:600;
-  color:var(--ink);
-  line-height:1.3;
+.ledger-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--red);
 }
 
-.levels-note{
-  margin-top:14px;
-  font-size:13px;
-  color:var(--muted);
+.ledger-session {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin-top: 0.25rem;
 }
 
-/* CTA STRIP */
-.cta-strip{
-  background:var(--ink);
-  padding:50px 0;
+.ledger-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
 }
-.cta-inner{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:20px;
+
+.ledger-row {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  padding: 0.75rem 0.875rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.cta-inner h2{
-  font-family:'Fraunces',serif;
-  color:#f5efe0;
-  font-size:22px;
-  margin:0;
-  font-weight:600;
+
+.ledger-row-title {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--black);
 }
-.cta-inner p{ color:#b7bad0; margin:6px 0 0; font-size:14px; }
+
+.ledger-row-meta {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+}
+
+.ledger-notice {
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+  border-left: 2px solid var(--black);
+  padding-left: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.ledger-notice strong {
+  color: var(--black);
+}
+
+.ledger-action {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+/* SECTION HEADERS */
+.section-head {
+  grid-column: span 12;
+  margin-bottom: 0.5rem;
+}
+
+/* FEATURE BOXES (Rational Modular Grid) */
+.feature-box {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 0.15s ease;
+}
+
+.feature-box:hover {
+  border-color: var(--black);
+}
+
+.feature-index {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--red);
+  margin-bottom: 1rem;
+}
+
+.feature-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.feature-text {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* PROGRAM CARDS (Strict Modular Split) */
+.program-box {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--black);
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-top-color 0.15s ease;
+}
+
+.program-box:hover {
+  border-top-color: var(--red);
+}
+
+.program-box.featured {
+  border-top: 3px solid var(--red);
+  background: #FCFCFC;
+}
+
+.program-tag {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--red);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.program-meta-badge {
+  display: inline-block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.625rem;
+  border: 1px solid var(--black);
+  background: var(--black);
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.program-desc {
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+}
+
+.program-specs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--rule);
+  padding-top: 0.875rem;
+}
+
+.program-specs li {
+  font-size: 0.8125rem;
+  color: var(--black);
+  margin-bottom: 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.program-specs li::before {
+  content: "■";
+  color: var(--red);
+  font-size: 0.625rem;
+}
+
+/* ==========================================================================
+   EXAM HIERARCHY (Swiss International Modular Progression)
+   ========================================================================== */
+.filter-bar {
+  grid-column: span 12;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--black);
+  border-radius: 0;
+  background: var(--white);
+  color: var(--black);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.filter-btn:hover {
+  background: var(--gray);
+}
+
+.filter-btn.active {
+  background: var(--black);
+  color: var(--white);
+}
+
+.filter-btn:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 2px;
+}
+
+/* TIER MODULAR BLOCKS */
+.tier-module {
+  grid-column: span 12;
+  border: 1px solid var(--black);
+  padding: 2rem;
+  background: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.tier-module-header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  align-items: flex-start;
+}
+
+.tier-module-left {
+  grid-column: span 8;
+}
+
+.tier-module-right {
+  grid-column: span 4;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tier-tag {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--red);
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.tier-title-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.tier-desc-text {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0.35rem 0 0 0;
+}
+
+.tier-badge-sharp {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid var(--black);
+  background: var(--gray);
+  color: var(--black);
+  white-space: nowrap;
+}
+
+.tier-badge-sharp.badge--accent {
+  background: var(--black);
+  color: var(--white);
+}
+
+/* STAGE CARDS GRID */
+.stages-row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+}
+
+.stage-card-swiss {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 0.15s ease;
+}
+
+.stage-card-swiss:hover {
+  border-color: var(--black);
+}
+
+.stage-card-swiss.col-4 {
+  grid-column: span 4;
+}
+
+.stage-card-swiss.col-6 {
+  grid-column: span 6;
+}
+
+.stage-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.stage-index-num {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--red);
+  letter-spacing: 0.08em;
+}
+
+.stage-script {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.stage-name-en {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.25rem 0;
+}
+
+.stage-role-subtitle {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.stage-body-text {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0 0 1.25rem 0;
+}
+
+.stage-foot-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--rule);
+}
+
+.stage-milestone-pill {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.stage-milestone-pill.accent {
+  color: var(--red);
+}
+
+.stage-level-meta {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+}
+
+/* RECOGNITION BLOCK (High-Contrast International Bar) */
+.recognition-block {
+  grid-column: span 12;
+  background: var(--black);
+  color: var(--white);
+  padding: 2.5rem 2rem;
+  border-top: 4px solid var(--red);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.recognition-left {
+  grid-column: span 6;
+}
+
+.recognition-left .eyebrow {
+  color: var(--red);
+}
+
+.recognition-left h3 {
+  color: var(--white);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.recognition-left p {
+  color: #9CA3AF;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.recognition-right {
+  grid-column: span 6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.recognition-cell {
+  border: 1px solid #374151;
+  padding: 1rem;
+  background: #111827;
+}
+
+.recognition-cell .rc-stage {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--red);
+}
+
+.recognition-cell .rc-title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0.25rem 0;
+}
+
+.recognition-cell .rc-equiv {
+  font-size: 0.75rem;
+  color: #9CA3AF;
+  line-height: 1.3;
+}
+
+/* FULL-WIDTH CTA STRIP */
+.cta-section {
+  background: var(--gray);
+  border-top: 1px solid var(--black);
+  border-bottom: 1px solid var(--black);
+}
+
+.cta-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  align-items: center;
+}
+
+.cta-text {
+  grid-column: span 8;
+}
+
+.cta-text h2 {
+  margin: 0 0 0.5rem 0;
+}
+
+.cta-text p {
+  font-size: 1.0625rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.cta-action {
+  grid-column: span 4;
+  display: flex;
+  justify-content: flex-end;
+}
 
 /* FOOTER */
-footer{
-  text-align:center;
-  font-size:12px;
-  color:var(--muted);
-  padding:26px 0;
-  border-top:1px solid var(--line);
+.site-footer {
+  border-top: 1px solid var(--black);
+  background: var(--white);
 }
 
-/* RESPONSIVE */
-@media(max-width:860px){
-  .hero{ grid-template-columns:1fr; gap:36px; padding:44px 0 36px; }
-  .hero h1{ font-size:28px; }
-  .hero p{ max-width:none; }
-  .feature-grid{ grid-template-columns:1fr; }
-  .programs-grid{ grid-template-columns:1fr; }
-  .levels-path{ flex-direction:column; }
-  .level-step{ border-right:none; border-bottom:1px dashed var(--line); text-align:left; }
-  .level-step:last-child{ border-bottom:none; }
-  .nav-links a{ margin:0 0 0 16px; }
-  .cta-inner{ flex-direction:column; align-items:flex-start; }
-  .features, .programs{ padding:44px 0; }
-  .levels{ padding:6px 0 50px; }
-  .cta-strip{ padding:38px 0; }
-  .section-heading{ font-size:22px; margin-bottom:24px; }
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 2rem;
+  align-items: center;
 }
 
-@media(max-width:480px){
-  .container{ padding:0 16px; }
-  header{ padding:14px 0; }
-  .logo{ width:32px; }
-  .brand-name-hi{ font-size:19px; }
-  .brand-sub{ font-size:10px; }
-  .nav-links a{ font-size:13px; }
-
-  .hero{ padding:32px 0 28px; }
-  .hero h1{ font-size:24px; }
-  .hero p{ font-size:15px; }
-  .hero-ctas{ flex-direction:column; align-items:stretch; }
-  .hero-ctas .btn{ text-align:center; margin:0; }
-
-  .register-card{ padding:20px 16px 18px; }
-  .register-head{ flex-wrap:wrap; gap:12px; }
-  .seal{ width:44px; height:44px; font-size:16px; }
-  .register-title{ font-size:15px; }
-
-  .feature-box, .program-card{ padding:20px 18px; }
-  .section-heading{ font-size:20px; }
-
-  .level-step{ padding:16px 14px; }
-
-  .cta-inner{ align-items:stretch; }
-  .cta-inner .btn{ text-align:center; }
+.footer-left {
+  grid-column: span 6;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
 }
 
-@media (prefers-reduced-motion: reduce){
-  body{ animation:none; opacity:1; }
-  .feature-box:hover{ transform:none; }
+.footer-right {
+  grid-column: span 6;
+  text-align: right;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (Strict 12-Column Fallbacks)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .stage-card-swiss.col-4 {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid,
+  .cta-grid,
+  .header-grid,
+  .footer-grid {
+    padding: 2.5rem 1.25rem;
+    gap: 1.5rem;
+  }
+
+  .grid > .main,
+  .grid > .aside,
+  .col-12, .col-8, .col-6, .col-4, .col-3,
+  .brand,
+  .site-nav,
+  .cta-text,
+  .cta-action,
+  .footer-left,
+  .footer-right,
+  .recognition-left,
+  .recognition-right,
+  .tier-module-left,
+  .tier-module-right {
+    grid-column: 1 / -1;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .site-nav {
+    justify-content: flex-start;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .cta-action {
+    justify-content: flex-start;
+  }
+
+  .tier-module-right {
+    justify-content: flex-start;
+  }
+
+  .recognition-right {
+    grid-template-columns: 1fr;
+  }
+
+  .stage-card-swiss.col-4,
+  .stage-card-swiss.col-6 {
+    grid-column: 1 / -1;
+  }
+
+  .footer-right {
+    text-align: left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <div class="container max header-inner">
-    <div class="brand-wrap">
-      <img src="images/logo.png" class="logo" alt="Upadhi Tuition Center logo">
+<!-- STRICT SWISS HEADER -->
+<header class="site-header">
+  <div class="header-grid">
+    <a href="index.html" class="brand" aria-label="Upadhi Tuition Center Home">
+      <div class="brand-seal devanagari">उ</div>
       <div>
-        <div class="brand-name-hi devanagari">उपाधि</div>
-        <div class="brand-sub">Tuition Centre</div>
+        <div class="brand-title">UPADHI TUITION</div>
+        <div class="brand-subtitle">CBSE &amp; State Tuition · Hindi Prachar Sabha Coaching</div>
       </div>
-    </div>
+    </a>
 
-    <div class="nav-links">
-      <a href="contact.html">Contact</a>
-    </div>
+    <nav class="site-nav" aria-label="Main Navigation">
+      <a href="#tuition-programs">01. Programs</a>
+      <a href="#examination-path">02. Hindi Exam Path</a>
+      <a href="contact.html">03. Contact</a>
+    </nav>
   </div>
 </header>
 
-<section class="container max hero">
-  <div>
-    <span class="mono-label hero-eyebrow">HINDI · ENGLISH · MALAYALAM · SCHOOL TUITION</span>
-    <h1>Structured coaching for academic excellence</h1>
-    <p>
-      Focused preparation for Hindi Prachar Sabha examinations, English and
-      Malayalam tuition, and school tuition up to Class 10, with small
-      batches and individual attention at every level.
-    </p>
-    <div class="hero-ctas">
-      <a href="contact.html" class="btn">Enquire about admission</a>
-      <!-- <a href="contact.html" class="btn btn-ghost">Contact us</a> -->
-    </div>
-  </div>
-
-  <div class="register-card">
-    <div class="register-head">
-      <div>
-        <span class="mono-label">Admission Register</span>
-        <div class="register-title">Session 2026</div>
+<main>
+  <!-- HERO SECTION (8 / 4 Column Asymmetric Grid) -->
+  <section class="grid grid--no-border">
+    <div class="main">
+      <span class="eyebrow">CBSE &amp; STATE BOARD · SUBJECT TUITION · HINDI PRACHAR SABHA</span>
+      <h1>Structured coaching for academic excellence.</h1>
+      <p class="lead">
+        Comprehensive CBSE and State Board school subject tuition up to Class 10—with classes tailored and scheduled according to individual student need—alongside rigorous preparation for all 9 stages of Hindi Prachar Sabha examinations.
+      </p>
+      <div class="hero-ctas">
+        <a href="contact.html" class="button">Enquire about admission</a>
+        <a href="#tuition-programs" class="button button--outline">Explore Academic Programs ↓</a>
       </div>
-      <div class="seal devanagari">उ</div>
     </div>
-    <div class="register-image">
-      <img src="images/hindi.png" alt="Hindi Prachar Sabha exam levels chart">
+
+    <!-- ASIDE: SWISS ADMISSION LEDGER -->
+    <aside class="aside">
+      <div class="swiss-ledger">
+        <div class="ledger-header">
+          <div>
+            <span class="ledger-label">Admission Register</span>
+            <div class="ledger-session">Session 2026</div>
+          </div>
+          <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--red);">OPEN</div>
+        </div>
+
+        <div class="ledger-rows">
+          <div class="ledger-row">
+            <div>
+              <div class="ledger-row-title">CBSE &amp; State Board Tuition</div>
+              <div class="ledger-row-meta">Class 1 to 10 · All Subjects</div>
+            </div>
+            <span class="mono" style="font-size:0.75rem;font-weight:700;color:var(--red);">NEED-BASED</span>
+          </div>
+
+          <div class="ledger-row">
+            <div>
+              <div class="ledger-row-title">Hindi Prachar Sabha Coaching</div>
+              <div class="ledger-row-meta">Parichaya to Praveen (9 Stages)</div>
+            </div>
+            <span class="mono" style="font-size:0.75rem;font-weight:700;">FEB / AUG</span>
+          </div>
+
+          <div class="ledger-row">
+            <div>
+              <div class="ledger-row-title">Language Specialization</div>
+              <div class="ledger-row-meta">English &amp; Malayalam Tuition</div>
+            </div>
+            <span class="mono" style="font-size:0.75rem;font-weight:700;">KG–12</span>
+          </div>
+        </div>
+
+        <div class="ledger-notice">
+          <strong>Need-Based Scheduling:</strong> Subject classes for CBSE and State Board are customized according to student requirements and individual school exam calendars.
+        </div>
+
+        <a href="#tuition-programs" class="button ledger-action">View all programs ↓</a>
+      </div>
+    </aside>
+  </section>
+
+  <!-- FEATURES SECTION (4-Column Modular Grid) -->
+  <section class="grid">
+    <div class="section-head">
+      <span class="eyebrow">01 / PRINCIPLES</span>
+      <h2>Coaching built around the student.</h2>
     </div>
-    <div class="register-foot">
-      <span>SESSIONS: FEB &amp; AUG</span>
-      <span>UPADHI TUITION CENTRE</span>
+
+    <div class="feature-box col-3">
+      <div>
+        <div class="feature-index">01 /</div>
+        <div class="feature-title">Experienced faculty</div>
+        <p class="feature-text">Guided preparation with structured academic plans tailored to each student's specific baseline level.</p>
+      </div>
+    </div>
+
+    <div class="feature-box col-3">
+      <div>
+        <div class="feature-index">02 /</div>
+        <div class="feature-title">Small batches</div>
+        <p class="feature-text">A focused learning environment with individual attention, keeping every student visible and fully supported.</p>
+      </div>
+    </div>
+
+    <div class="feature-box col-3">
+      <div>
+        <div class="feature-index">03 /</div>
+        <div class="feature-title">Tailored according to need</div>
+        <p class="feature-text">CBSE and State Board subject tuition scheduled flexibly around school tests, term exams, and concept weaknesses.</p>
+      </div>
+    </div>
+
+    <div class="feature-box col-3">
+      <div>
+        <div class="feature-index">04 /</div>
+        <div class="feature-title">Hindi exam sessions</div>
+        <p class="feature-text">Dedicated preparation for the February and August Hindi Prachar Sabha examination sessions across all 9 levels.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMS SECTION (Modular 2x2 Grid) -->
+  <section class="grid" id="tuition-programs">
+    <div class="section-head">
+      <span class="eyebrow">02 / CURRICULUM</span>
+      <h2>Academic programs.</h2>
+      <p class="lead" style="margin-bottom:1rem;">
+        Rigorous academic support designed for school students and language learners, with flexible subject-specific scheduling.
+      </p>
+    </div>
+
+    <!-- Program 01: CBSE & State Board Tuition (Prominent Feature) -->
+    <div class="program-box featured col-6">
+      <div>
+        <span class="program-tag">Program 01 · School Tuition</span>
+        <span class="program-meta-badge">CBSE &amp; State Board · Class 1 to 10</span>
+        <h3>CBSE &amp; State Board Subject Tuition</h3>
+        <p class="program-desc">
+          Structured, need-based subject tuition for students following CBSE and State Board curricula. Classes are organized and scheduled flexibly according to the student's individual academic requirements, school syllabus, and exam schedules.
+        </p>
+      </div>
+      <ul class="program-specs">
+        <li><strong>Need-Based Scheduling:</strong> Tailored support focusing on subjects where the student needs reinforcement.</li>
+        <li><strong>Comprehensive Coverage:</strong> Mathematics, Science, Social Science, and Language papers.</li>
+        <li><strong>Exam Readiness:</strong> Periodic test series, concept doubt-clearing, and revision aligned with school exams.</li>
+      </ul>
+    </div>
+
+    <!-- Program 02: Hindi Prachar Sabha -->
+    <div class="program-box col-6">
+      <div>
+        <span class="program-tag">Program 02 · Certified Examination Ladder</span>
+        <span class="program-meta-badge">Dakshin Bharat Hindi Prachar Sabha</span>
+        <h3>Hindi Prachar Sabha Coaching (All 9 Stages)</h3>
+        <p class="program-desc">
+          Systematic preparation across all nine examination stages, from foundational Parichaya through Praveen. Officially recognized for SSLC, B.A. Hindi, and M.A. Hindi equivalence.
+        </p>
+      </div>
+      <ul class="program-specs">
+        <li><strong>Exam Cycles:</strong> Dedicated batches for February and August examination sessions.</li>
+        <li><strong>Complete Syllabus:</strong> Grammar, textbook prose, classical poetry, essays, and translation.</li>
+        <li><strong>Govt. Recognition:</strong> Central and State Government recognized qualifications.</li>
+      </ul>
+    </div>
+
+    <!-- Program 03: English Tuition -->
+    <div class="program-box col-6">
+      <div>
+        <span class="program-tag">Program 03 · Language Studies</span>
+        <span class="program-meta-badge">Class 1 to 12 &amp; Spoken English</span>
+        <h3>English Language Tuition</h3>
+        <p class="program-desc">
+          Structured training designed to build grammar mastery, reading comprehension, writing precision, and confident conversational fluency for school examinations and daily life.
+        </p>
+      </div>
+      <ul class="program-specs">
+        <li><strong>Grammar &amp; Mechanics:</strong> Sentence structures, tenses, active/passive voice, and vocabulary.</li>
+        <li><strong>School Curriculum:</strong> Textbook prose, poetry analysis, and formal essay/letter writing.</li>
+        <li><strong>Communication:</strong> Pronunciation, speaking activities, and stage confidence.</li>
+      </ul>
+    </div>
+
+    <!-- Program 04: Malayalam Tuition -->
+    <div class="program-box col-6">
+      <div>
+        <span class="program-tag">Program 04 · Regional Language</span>
+        <span class="program-meta-badge">KG through Class 12</span>
+        <h3>Malayalam Language Tuition</h3>
+        <p class="program-desc">
+          From basic letter formation (Aksharamala) to higher secondary textbook literature, grammar, and formal writing, tailored for both beginners and school-syllabus students.
+        </p>
+      </div>
+      <ul class="program-specs">
+        <li><strong>Foundation:</strong> Script recognition, vowel/consonant combinations (chillaksharangal), and pronunciation.</li>
+        <li><strong>Academic Support:</strong> State board and CBSE Malayalam textbook assistance and test preparation.</li>
+        <li><strong>Fluency:</strong> Reading comprehension, essay drafting, and vocabulary development.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       EXAMINATION HIERARCHY (Swiss Modernist 9-Stage Modular System)
+       ====================================================================== -->
+  <section class="grid" id="examination-path">
+    <div class="section-head">
+      <span class="eyebrow">03 / DAKSHIN BHARAT HINDI PRACHAR SABHA</span>
+      <h2>Examination hierarchy.</h2>
+      <p class="lead">
+        Dakshin Bharat Hindi Prachar Sabha (Madras) examinations follow a structured multi-tier academic ladder recognized by the Central Government and State Education Boards. We provide tailored coaching across all 9 progressive stages.
+      </p>
+    </div>
+
+    <!-- FILTER BUTTONS -->
+    <div class="filter-bar">
+      <button class="filter-btn active" data-tier="all">All 9 Levels</button>
+      <button class="filter-btn" data-tier="tier1">Tier 01: Foundation (1–3)</button>
+      <button class="filter-btn" data-tier="tier2">Tier 02: Secondary (4–5)</button>
+      <button class="filter-btn" data-tier="tier3">Tier 03: Degree Level (6–7)</button>
+      <button class="filter-btn" data-tier="tier4">Tier 04: Post-Graduate (8–9)</button>
+    </div>
+
+    <!-- TIER 01: FOUNDATION -->
+    <div class="tier-module" data-tier="tier1">
+      <div class="tier-module-header">
+        <div class="tier-module-left">
+          <span class="tier-tag">Tier 01 / 04 · Foundation Stage</span>
+          <div class="tier-title-row">
+            <h3>Foundation Stage</h3>
+            <span class="devanagari" style="font-size:1.125rem;font-weight:600;color:var(--text-muted);">(प्रारंभिक स्तर)</span>
+          </div>
+          <p class="tier-desc-text">Elementary Hindi script, phonetic pronunciation, vocabulary, and basic conversational communication.</p>
+        </div>
+        <div class="tier-module-right">
+          <span class="tier-badge-sharp">Primary &amp; Middle Equivalence</span>
+        </div>
+      </div>
+
+      <div class="stages-row">
+        <!-- Stage 01 -->
+        <div class="stage-card-swiss col-4">
+          <div>
+            <div class="stage-card-head">
+              <span class="stage-index-num">STAGE 01</span>
+              <span class="stage-script">परिचय</span>
+            </div>
+            <div class="stage-name-en">Parichaya</div>
+            <span class="stage-role-subtitle">Basic Hindi Knowledge</span>
+            <p class="stage-body-text">
+              Introduction to Devanagari alphabet (स्वर &amp; व्यंजन), correct pronunciation, vowel signs (मात्राएँ), and everyday vocabulary.
+            </p>
+          </div>
+          <div class="stage-foot-bar">
+            <span class="stage-milestone-pill">Foundation</span>
+            <span class="stage-level-meta">Entry Level</span>
+          </div>
+        </div>
+
+        <!-- Stage 02 -->
+        <div class="stage-card-swiss col-4">
+          <div>
+            <div class="stage-card-head">
+              <span class="stage-index-num">STAGE 02</span>
+              <span class="stage-script">प्राथमिक</span>
+            </div>
+            <div class="stage-name-en">Prathamik</div>
+            <span class="stage-role-subtitle">Elementary Hindi Proficiency</span>
+            <p class="stage-body-text">
+              Simple sentence construction, basic noun/verb forms, elementary comprehension passages, short stories, and foundational grammar rules.
+            </p>
+          </div>
+          <div class="stage-foot-bar">
+            <span class="stage-milestone-pill">Elementary</span>
+            <span class="stage-level-meta">Primary Level</span>
+          </div>
+        </div>
+
+        <!-- Stage 03 -->
+        <div class="stage-card-swiss col-4">
+          <div>
+            <div class="stage-card-head">
+              <span class="stage-index-num">STAGE 03</span>
+              <span class="stage-script">मध्यमा</span>
+            </div>
+            <div class="stage-name-en">Madhyama</div>
+            <span class="stage-role-subtitle">Intermediate Hindi Skills</span>
+            <p class="stage-body-text">
+              Applied grammar (लिंग, वचन, काल, कारक), conversational practice, reading standard prose, and informal letter drafting.
+            </p>
+          </div>
+          <div class="stage-foot-bar">
+            <span class="stage-milestone-pill">Intermediate</span>
+            <span class="stage-level-meta">Middle School</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIER 02: SECONDARY -->
+    <div class="tier-module" data-tier="tier2">
+      <div class="tier-module-header">
+        <div class="tier-module-left">
+          <span class="tier-tag">Tier 02 / 04 · Secondary &amp; Matriculation Stage</span>
+          <div class="tier-title-row">
+            <h3>Secondary Stage</h3>
+            <span class="devanagari" style="font-size:1.125rem;font-weight:600;color:var(--text-muted);">(माध्यमिक स्तर)</span>
+          </div>
+          <p class="tier-desc-text">High school language competence leading to official State Board SSLC / 10th Standard Hindi equivalence.</p>
+        </div>
+        <div class="tier-module-right">
+          <span class="tier-badge-sharp badge--accent">★ SSLC / Class 10 Hindi Equivalent</span>
+        </div>
+      </div>
+
+      <div class="stages-row">
+        <!-- Stage 04 -->
+        <div class="stage-card-swiss col-6">
+          <div>
+            <div class="stage-card-head">
+              <span class="stage-index-num">STAGE 04</span>
+              <span class="stage-script">राष्ट्रभाषा</span>
+            </div>
+            <div class="stage-name-en">Rashtrabhasha</div>
+            <span class="stage-role-subtitle">National Language Proficiency</span>
+            <p class="stage-body-text">
+              Textbook prose and selected poetry, essay composition on social themes, précis writing, and conversational confidence.
+            </p>
+          </div>
+          <div class="stage-foot-bar">
+            <span class="stage-milestone-pill">Secondary</span>
+            <span class="stage-level-meta">Pre-Matric</span>
+          </div>
+        </div>
+
+        <!-- Stage 05 -->
+        <div class="stage-card-swiss col-6">
+          <div>
+            <div class="stage-card-head">
+              <span class="stage-index-num">STAGE 05</span>
+              <span class="stage-script">प्रवेशिका</span>
+            </div>
+            <div class="stage-name-en">Praveshika</div>
+            <span class="stage-role-subtitle">Entrance to Higher Hindi Studies</span>
+            <p class="stage-body-text">
+              Classical and modern Hindi literature, comprehensive Sanskrit-Hindi grammar, and Hindi-English-Regional translation exercises.
+            </p>
+          </div>
+          <div class="stage-foot-bar">
+            <span class="stage-milestone-pill accent">★ SSLC / 10th Equivalent</span>
+            <span class="stage-level-meta">Govt. Recognized</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIER 03: DEGREE LEVEL -->
+    <div class="tier-module" data-tier="tier3">
+      <div class="tier-module-header">
+        <div class="tier-module-left">
+          <span class="tier-tag">Tier 03 / 04 · Degree Level</span>
+          <div class="tier-title-row">
+            <h3>Rashtrabhasha Visharad</h3>
+            <span class="devanagari" style="font-size:1.125rem;font-weight:600;color:var(--text-muted);">(राष्ट्रभाषा विशारद)</span>
+          </div>
+          <p class="tier-desc-text">Advanced literary scholarship and translation studies, officially recognized as equivalent to a Bachelor of Arts (B.A.) in Hindi.</p>
+        </div>
+        <div class="tier-module-right">
+          <span class="tier-badge-sharp badge--accent">★ Bachelor of Arts (B.A. Hindi) Equivalent</span>
+        </div>
+      </div>
+
+      <div class="stages-row">
+        <!-- Stage 06 -->
+        <div class="stage-card-swiss col-6">
+          <div>
+            <div class="stage-card-head">
+              <span class="stage-index-num">STAGE 06</span>
+              <span class="stage-script">विशारद पूर्वार्ध</span>
+            </div>
+            <div class="stage-name-en">Visharad Poorvardh</div>
+            <span class="stage-role-subtitle">Advanced Scholarship (Part 1)</span>
+            <p class="stage-body-text">
+              Ancient &amp; medieval poetry (Surdas, Tulsidas, Kabir), dramatic works, and an in-depth chronological history of Hindi literature (साहित्य का इतिहास).
+            </p>
+          </div>
+          <div class="stage-foot-bar">
+            <span class="stage-milestone-pill">Degree Part 1</span>
+            <span class="stage-level-meta">Paper I &amp; II</span>
+          </div>
+        </div>
+
+        <!-- Stage 07 -->
+        <div class="stage-card-swiss col-6">
+          <div>
+            <div class="stage-card-head">
+              <span class="stage-index-num">STAGE 07</span>
+              <span class="stage-script">विशारद उत्तरार्ध</span>
+            </div>
+            <div class="stage-name-en">Visharad Uttarardh</div>
+            <span class="stage-role-subtitle">Advanced Scholarship (Part 2)</span>
+            <p class="stage-body-text">
+              Modern Hindi prose, literary essays, critical analysis, comparative grammar, and advanced bidirectional translation studies.
+            </p>
+          </div>
+          <div class="stage-foot-bar">
+            <span class="stage-milestone-pill accent">★ B.A. Degree Equivalent</span>
+            <span class="stage-level-meta">Complete</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIER 04: POST-GRADUATE -->
+    <div class="tier-module" data-tier="tier4">
+      <div class="tier-module-header">
+        <div class="tier-module-left">
+          <span class="tier-tag">Tier 04 / 04 · Post-Graduate Level</span>
+          <div class="tier-title-row">
+            <h3>Rashtrabhasha Praveen</h3>
+            <span class="devanagari" style="font-size:1.125rem;font-weight:600;color:var(--text-muted);">(राष्ट्रभाषा प्रवीण)</span>
+          </div>
+          <p class="tier-desc-text">Master level proficiency for aspiring Hindi lecturers, teachers, and official translators, equivalent to Master of Arts (M.A.) in Hindi.</p>
+        </div>
+        <div class="tier-module-right">
+          <span class="tier-badge-sharp badge--accent">★ Master of Arts (M.A. Hindi) Equivalent</span>
+        </div>
+      </div>
+
+      <div class="stages-row">
+        <!-- Stage 08 -->
+        <div class="stage-card-swiss col-6">
+          <div>
+            <div class="stage-card-head">
+              <span class="stage-index-num">STAGE 08</span>
+              <span class="stage-script">प्रवीण पूर्वार्ध</span>
+            </div>
+            <div class="stage-name-en">Praveen Poorvardh</div>
+            <span class="stage-role-subtitle">Hindi Proficiency (Part 1)</span>
+            <p class="stage-body-text">
+              Historical linguistics (भाषा विज्ञान), evolution of Hindi dialects, classical epics (कामायनी, साकेत), and ancient poetics (काव्यशास्त्र).
+            </p>
+          </div>
+          <div class="stage-foot-bar">
+            <span class="stage-milestone-pill">Post-Grad Part 1</span>
+            <span class="stage-level-meta">Paper I &amp; II</span>
+          </div>
+        </div>
+
+        <!-- Stage 09 -->
+        <div class="stage-card-swiss col-6">
+          <div>
+            <div class="stage-card-head">
+              <span class="stage-index-num">STAGE 09</span>
+              <span class="stage-script">प्रवीण उत्तरार्ध</span>
+            </div>
+            <div class="stage-name-en">Praveen Uttarardh</div>
+            <span class="stage-role-subtitle">Hindi Proficiency (Part 2)</span>
+            <p class="stage-body-text">
+              Modern literary criticism, media journalism, research methodology, technical terminology, and professional administrative translation.
+            </p>
+          </div>
+          <div class="stage-foot-bar">
+            <span class="stage-milestone-pill accent">★ M.A. &amp; Teacher Qualified</span>
+            <span class="stage-level-meta">Apex Level</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RECOGNITION BLOCK -->
+    <div class="recognition-block">
+      <div class="recognition-left">
+        <span class="eyebrow">UNIVERSITY &amp; GOVT. RECOGNITION</span>
+        <h3>Certified Academic Ladder</h3>
+        <p>
+          Examinations are conducted twice a year in <strong>February</strong> and <strong>August</strong> under the authority of Dakshin Bharat Hindi Prachar Sabha.
+        </p>
+      </div>
+
+      <div class="recognition-right">
+        <div class="recognition-cell">
+          <div class="rc-stage">STAGE 05</div>
+          <div class="rc-title">Praveshika</div>
+          <div class="rc-equiv">= SSLC / 10th Hindi</div>
+        </div>
+        <div class="recognition-cell">
+          <div class="rc-stage">STAGE 07</div>
+          <div class="rc-title">Visharad</div>
+          <div class="rc-equiv">= B.A. Hindi Degree</div>
+        </div>
+        <div class="recognition-cell">
+          <div class="rc-stage">STAGE 09</div>
+          <div class="rc-title">Praveen</div>
+          <div class="rc-equiv">= M.A. / Teacher Qual.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <section class="cta-section">
+    <div class="cta-grid">
+      <div class="cta-text">
+        <h2>Ready to register for the next session?</h2>
+        <p>Admissions open for CBSE &amp; State Board subject tuition and all 9 Hindi exam levels.</p>
+      </div>
+      <div class="cta-action">
+        <a href="contact.html" class="button">Get in touch</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-left">
+      © 2026 Upadhi Tuition Center. All rights reserved.
+    </div>
+    <div class="footer-right">
+      CBSE &amp; STATE BOARD TUITION · DAKSHIN BHARAT HINDI PRACHAR SABHA COACHING
     </div>
   </div>
-</section>
-
-<div class="section-divider"></div>
-
-<section class="container max features">
-  <div class="section-label">Why families choose us</div>
-  <h2 class="section-heading">Coaching built around the student</h2>
-  <div class="feature-grid">
-    <div class="feature-box">
-      <span class="num">01</span>
-      <h3>Experienced faculty</h3>
-      <p>Guided preparation with structured academic plans tailored to each student's level.</p>
-    </div>
-    <div class="feature-box">
-      <span class="num">02</span>
-      <h3>Small batches</h3>
-      <p>A focused learning environment that keeps every student visible and supported.</p>
-    </div>
-    <div class="feature-box">
-      <span class="num">03</span>
-      <h3>Exam preparation</h3>
-      <p>Dedicated coaching for the February and August Hindi Prachar Sabha sessions.</p>
-    </div>
-    <div class="feature-box">
-      <span class="num">04</span>
-      <h3>School tuition, up to Class 10</h3>
-      <p>All-subject tuition support from primary grades through Class 10.</p>
-    </div>
-  </div>
-</section>
-
-<section class="container max programs">
-  <div class="section-label">What we teach</div>
-  <h2 class="section-heading">Our programs</h2>
-  <div class="programs-grid">
-    <div class="program-card" style="--pc-accent:var(--accent);">
-      <span class="program-tag">HINDI</span>
-      <h3>Hindi Prachar Sabha coaching</h3>
-      <p>Structured preparation across all six examination stages, from Prathmic through Praveen.</p>
-    </div>
-    <div class="program-card" style="--pc-accent:var(--marigold);">
-      <span class="program-tag">ENGLISH</span>
-      <h3>English tuition classes</h3>
-      <p>Reading, writing, grammar, vocabulary and speaking, built for concept clarity and confidence.</p>
-    </div>
-    <div class="program-card" style="--pc-accent:#2f6f5e;">
-      <span class="program-tag">MALAYALAM</span>
-      <h3>Malayalam tuition</h3>
-      <p>Letters, pronunciation, vocabulary and conversation, for KG through Class 12.</p>
-    </div>
-  </div>
-</section>
-
-<section class="container max levels">
-  <div class="section-label">Examination path</div>
-  <h2 class="section-heading">Hindi Prachar Sabha levels we coach for</h2>
-  <div class="levels-path">
-    <div class="level-step">
-      <span class="step-index">STAGE 1</span>
-      <span class="step-name">Prathmic</span>
-    </div>
-    <div class="level-step">
-      <span class="step-index">STAGE 2</span>
-      <span class="step-name">Madhyama</span>
-    </div>
-    <div class="level-step">
-      <span class="step-index">STAGE 3</span>
-      <span class="step-name">Rashtrabhasha</span>
-    </div>
-    <div class="level-step">
-      <span class="step-index">STAGE 4</span>
-      <span class="step-name">Praveshika</span>
-    </div>
-    <div class="level-step">
-      <span class="step-index">STAGE 5</span>
-      <span class="step-name">Visharad</span>
-    </div>
-    <div class="level-step">
-      <span class="step-index">STAGE 6</span>
-      <span class="step-name">Praveen</span>
-    </div>
-  </div>
-</section>
-
-<section class="cta-strip">
-  <div class="container max cta-inner">
-    <div>
-      <h2>Ready to register?</h2>
-      <p>Admissions for the next session are open now.</p>
-    </div>
-    <a href="contact.html" class="btn">Get in touch</a>
-  </div>
-</section>
-
-<footer>
-  © 2026 Upadhi Tuition Center • Structured Coaching • Trusted Guidance
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const tierBlocks = document.querySelectorAll('.tier-module');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const target = btn.getAttribute('data-tier');
+      tierBlocks.forEach(block => {
+        if(target === 'all' || block.getAttribute('data-tier') === target){
+          block.style.display = 'block';
+        } else {
+          block.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script>
 
 </body>
 </html>
