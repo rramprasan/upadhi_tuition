@@ -3,8 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Upadhi Tuition Center — CBSE &amp; State Tuition | Hindi Prachar Sabha</title>
-<meta name="description" content="Need-based CBSE and State Board school subject tuition up to Class 10, alongside certified coaching for all 9 stages of Dakshin Bharat Hindi Prachar Sabha examinations.">
+<title>Upadhi Tuition Center — Karamana, Thiruvananthapuram | Online &amp; Offline</title>
+<meta name="description" content="In-person tuition at Karamana, Thiruvananthapuram and live online coaching. Need-based CBSE &amp; State subject tuition (1–10) and certified 9-stage Hindi Prachar Sabha exams.">
+
+<!-- Open Graph / WhatsApp Preview -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Upadhi Tuition Center — Karamana, Thiruvananthapuram">
+<meta property="og:description" content="Offline &amp; Online Classes: CBSE &amp; State Board tuition and certified Hindi Prachar Sabha coaching.">
+<meta property="og:image" content="images/logo.png">
+
+<link rel="icon" type="image/png" href="images/logo.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -718,6 +726,77 @@ p {
   letter-spacing: 0.05em;
 }
 
+/* LOCATION & CAMPUS SECTION */
+.location-box {
+  grid-column: span 12;
+  border: 1px solid var(--black);
+  background: var(--white);
+  padding: 2.5rem;
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.location-info {
+  grid-column: span 5;
+}
+
+.location-map-wrap {
+  grid-column: span 7;
+  border: 1px solid var(--black);
+  background: var(--gray);
+  height: 360px;
+  overflow: hidden;
+}
+
+.location-map-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.address-box {
+  background: var(--gray);
+  border-left: 3px solid var(--red);
+  padding: 1.25rem;
+  margin: 1.25rem 0;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.address-box strong {
+  display: block;
+  color: var(--black);
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.mode-badge-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.mode-badge {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid var(--black);
+  background: var(--white);
+}
+
+.mode-badge.highlight {
+  background: var(--black);
+  color: var(--white);
+}
+
 @media (max-width: 1024px) {
   .stage-card-swiss.col-4 { grid-column: span 6; }
 }
@@ -732,7 +811,8 @@ p {
   .brand, .site-nav, .cta-text, .cta-action,
   .footer-left, .footer-right,
   .recognition-left, .recognition-right,
-  .tier-module-left, .tier-module-right {
+  .tier-module-left, .tier-module-right,
+  .location-info, .location-map-wrap {
     grid-column: 1 / -1;
   }
   h1 { font-size: 2.75rem; }
@@ -756,14 +836,16 @@ p {
       <div class="brand-seal devanagari">उ</div>
       <div>
         <div class="brand-title">UPADHI TUITION</div>
-        <div class="brand-subtitle">CBSE &amp; State Tuition · Hindi Prachar Sabha</div>
+        <div class="brand-subtitle">Karamana · Thiruvananthapuram</div>
       </div>
     </a>
 
     <nav class="site-nav" aria-label="Main Navigation">
       <a href="#tuition-programs">01. Programs</a>
       <a href="#examination-path">02. Hindi Exams</a>
-      <a href="contact.html">03. Contact</a>
+      <a href="#location">03. Location</a>
+      <a href="register.html">04. Register</a>
+      <a href="contact.html">05. Contact</a>
     </nav>
   </div>
 </header>
@@ -772,14 +854,15 @@ p {
   <!-- HERO SECTION (Minimal Text, Maximum Impact) -->
   <section class="grid grid--no-border">
     <div class="main">
-      <span class="eyebrow">UPADHI TUITION CENTRE · SESSION 2026</span>
+      <span class="eyebrow">UPADHI TUITION CENTRE · KARAMANA, THIRUVANANTHAPURAM</span>
       <h1>CBSE. State Board.<br>Hindi Prachar Sabha.</h1>
       <p class="lead">
-        Need-based school subject tuition up to Class 10. Certified 9-stage Hindi examinations. Small batches, individual attention.
+        Offline classroom tuition in Karamana and live online interactive batches. Need-based school subject tuition up to Class 10 and certified 9-stage Hindi examinations.
       </p>
       <div class="hero-ctas">
-        <a href="contact.html" class="button">Enquire About Admission →</a>
+        <a href="register.html" class="button">Register Candidate →</a>
         <a href="#tuition-programs" class="button button--outline">Explore Programs ↓</a>
+        <a href="#location" class="button button--outline">View Campus Pin ↓</a>
       </div>
     </div>
 
@@ -804,8 +887,8 @@ p {
             <div class="label">School Grades</div>
           </div>
           <div class="ledger-metric-cell">
-            <div class="num">2×</div>
-            <div class="label">Feb &amp; Aug Cycles</div>
+            <div class="num" style="color:var(--red);">2 Mode</div>
+            <div class="label">Offline &amp; Online</div>
           </div>
           <div class="ledger-metric-cell">
             <div class="num" style="color:var(--red);">1:1</div>
@@ -814,10 +897,10 @@ p {
         </div>
 
         <div class="ledger-notice">
-          <strong>Need-Based Scheduling:</strong> Subject classes are arranged around your child's syllabus and school exam dates.
+          <strong>Karamana Campus &amp; Online:</strong> SNRA 23, Sathya Nagar, Karamana. Classes arranged flexibly around student syllabus.
         </div>
 
-        <a href="contact.html" class="button ledger-action">Apply for Admission →</a>
+        <a href="register.html" class="button ledger-action">Register Online →</a>
       </div>
     </aside>
   </section>
@@ -1240,15 +1323,63 @@ p {
     </div>
   </section>
 
+  <!-- LOCATION & CAMPUS SECTION -->
+  <section class="grid" id="location">
+    <div class="location-box">
+      <div class="section-head" style="margin-bottom:1.5rem;">
+        <span class="eyebrow">04 / CAMPUS &amp; LOCATION</span>
+        <h2>Classroom in Karamana. Online across India.</h2>
+      </div>
+
+      <div class="location-grid">
+        <div class="location-info">
+          <div class="mode-badge-row">
+            <span class="mode-badge highlight">Offline Classroom</span>
+            <span class="mode-badge highlight">Live Online</span>
+            <span class="mode-badge">Need-Based Batches</span>
+          </div>
+
+          <div class="address-box">
+            <strong>Upadhi Tuition Center</strong>
+            SNRA 23, Sathya Nagar, Mither Nagar,<br>
+            Karamana, Thiruvananthapuram,<br>
+            Kerala 695002
+          </div>
+
+          <p style="font-size:0.875rem;color:var(--text-muted);line-height:1.6;margin-bottom:1.5rem;">
+            Personalized in-person classroom tuition in Karamana, Trivandrum. High-speed interactive online batches available for students across Kerala and India.
+          </p>
+
+          <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+            <a href="https://www.google.com/maps/place/Upadhi+Tuition+center/@8.4769138,76.9683232,17z/data=!3m1!4b1!4m6!3m5!1s0x3b05bb95ebb4f1db:0x214197f38aaa5ebe!8m2!3d8.4769138!4d76.9683232!16s%2Fg%2F11z3z0fcyl" target="_blank" rel="noopener noreferrer" class="button">
+              Open Google Maps ↗
+            </a>
+            <a href="tel:+919633312986" class="button button--outline">
+              Call Direct
+            </a>
+          </div>
+        </div>
+
+        <div class="location-map-wrap">
+          <iframe 
+            src="https://maps.google.com/maps?q=8.4769138,76.9683232&hl=en&z=17&output=embed" 
+            title="Upadhi Tuition Center Location Map"
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA STRIP -->
   <section class="cta-section">
     <div class="cta-grid">
       <div class="cta-text">
         <h2>Admissions open for Session 2026.</h2>
-        <p>CBSE &amp; State Board subject tuition and all 9 Hindi examination levels.</p>
+        <p>Offline at Karamana, Trivandrum &amp; Live Online across India.</p>
       </div>
       <div class="cta-action">
-        <a href="contact.html" class="button">Get in Touch →</a>
+        <a href="register.html" class="button">Register Candidate →</a>
       </div>
     </div>
   </section>
@@ -1258,10 +1389,10 @@ p {
 <footer class="site-footer">
   <div class="footer-grid">
     <div class="footer-left">
-      © 2026 Upadhi Tuition Center. All rights reserved.
+      © 2026 Upadhi Tuition Center. SNRA 23, Sathya Nagar, Karamana, Thiruvananthapuram, Kerala 695002.
     </div>
     <div class="footer-right">
-      CBSE &amp; STATE BOARD TUITION · DAKSHIN BHARAT HINDI PRACHAR SABHA
+      ONLINE &amp; OFFLINE TUITION · DAKSHIN BHARAT HINDI PRACHAR SABHA
     </div>
   </div>
 </footer>

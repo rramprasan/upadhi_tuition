@@ -4,15 +4,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Registration — Upadhi Tuition Center</title>
-<meta name="description" content="Candidate registration for CBSE &amp; State Board need-based subject tuition and Dakshin Bharat Hindi Prachar Sabha coaching.">
+<meta name="description" content="Candidate registration for CBSE &amp; State Board need-based subject tuition and Dakshin Bharat Hindi Prachar Sabha coaching. Offline and online classes available.">
 
+<!-- Open Graph / WhatsApp Preview -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Candidate Registration — Upadhi Tuition Center">
+<meta property="og:description" content="Register for offline tuition at Karamana, Thiruvananthapuram or live online classes. CBSE, State Board &amp; Hindi Sabha.">
+<meta property="og:image" content="images/logo.png">
+
+<link rel="icon" type="image/png" href="images/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
 /* ==========================================================================
-   SWISS MODERNISM 2.0 — REGISTRATION (MINIMAL TEXT, MAXIMUM IMPACT)
+   SWISS MODERNISM 2.0 — REGISTRATION (ONLINE & OFFLINE)
    ========================================================================== */
 :root {
   --black: #000000;
@@ -122,7 +129,7 @@ h3 {
 }
 
 .brand {
-  grid-column: span 6;
+  grid-column: span 5;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -159,15 +166,16 @@ h3 {
 }
 
 .site-nav {
-  grid-column: span 6;
+  grid-column: span 7;
   display: flex;
   justify-content: flex-end;
-  gap: 1.75rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .site-nav a {
   font-family: "JetBrains Mono", monospace;
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -179,7 +187,7 @@ h3 {
 .site-nav a:hover { color: var(--red); }
 .site-nav a:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
 
-/* FORM CONTAINER (Swiss Module) */
+/* FORM CONTAINER */
 .form-box {
   background: var(--white);
   border: 1px solid var(--black);
@@ -240,7 +248,43 @@ textarea {
   resize: vertical;
 }
 
-/* CHECKBOX GROUP (Modular Swiss Selectors) */
+/* MODE SELECTOR PILLS */
+.delivery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.delivery-pill {
+  cursor: pointer;
+  position: relative;
+}
+
+.delivery-pill input {
+  position: absolute;
+  opacity: 0;
+}
+
+.delivery-pill span {
+  display: block;
+  padding: 0.875rem 1rem;
+  border: 1px solid var(--black);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  background: var(--white);
+  text-align: center;
+  transition: all 0.15s ease;
+}
+
+.delivery-pill input:checked + span {
+  background: var(--black);
+  color: var(--white);
+}
+
+/* CHECKBOX GROUP */
 .checkbox-group {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -323,12 +367,32 @@ textarea {
   outline-offset: 3px;
 }
 
+.button--outline {
+  background: transparent;
+  color: var(--black);
+}
+
+.status-box {
+  display: none;
+  padding: 1.25rem;
+  margin-top: 1.5rem;
+  border: 1px solid var(--black);
+  background: var(--gray);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.status-box.active {
+  display: block;
+}
+
 /* ASIDE SPECIFICATION BLOCK */
 .aside-block {
   background: var(--gray);
   border: 1px solid var(--black);
   border-top: 4px solid var(--red);
   padding: 2rem 1.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .aside-row {
@@ -398,8 +462,8 @@ textarea {
     grid-column: 1 / -1;
   }
   h1 { font-size: 2.75rem; }
-  .site-nav { justify-content: flex-start; gap: 1.25rem; flex-wrap: wrap; }
-  .checkbox-group { grid-template-columns: 1fr; }
+  .site-nav { justify-content: flex-start; gap: 1rem; }
+  .checkbox-group, .delivery-grid { grid-template-columns: 1fr; }
   .form-box { padding: 1.5rem; }
   .footer-right { text-align: left; }
 }
@@ -414,7 +478,7 @@ textarea {
       <div class="brand-seal devanagari">उ</div>
       <div>
         <div class="brand-title">UPADHI TUITION</div>
-        <div class="brand-subtitle">CBSE &amp; State Tuition · Hindi Prachar Sabha</div>
+        <div class="brand-subtitle">Karamana · Thiruvananthapuram</div>
       </div>
     </a>
 
@@ -422,7 +486,9 @@ textarea {
       <a href="index.html">00. Home</a>
       <a href="index.html#tuition-programs">01. Programs</a>
       <a href="index.html#examination-path">02. Hindi Exams</a>
-      <a href="contact.html">03. Contact</a>
+      <a href="contact.html#location">03. Location</a>
+      <a href="register.html" style="color:var(--red);">04. Register</a>
+      <a href="contact.html">05. Contact</a>
     </nav>
   </div>
 </header>
@@ -430,16 +496,29 @@ textarea {
 <main>
   <section class="grid grid--no-border">
     <div class="main">
-      <span class="eyebrow">ENROLLMENT INTAKE</span>
+      <span class="eyebrow">ENROLLMENT INTAKE · SESSION 2026</span>
       <h1>Registration.</h1>
       <p class="lead">
-        Submit candidate details. Instant WhatsApp transmission to our administration desk.
+        Submit candidate details. Instant processing for in-person classroom batches or live online coaching.
       </p>
 
       <div class="form-box">
         <form id="form">
 
-          <div class="form-section-title">01 / Guardian Identification</div>
+          <div class="form-section-title">01 / Delivery Format</div>
+          <label>Preferred Learning Mode *</label>
+          <div class="delivery-grid">
+            <label class="delivery-pill">
+              <input type="radio" name="delivery_mode" value="Offline (Karamana, Trivandrum)" checked>
+              <span>Offline (Karamana Center)</span>
+            </label>
+            <label class="delivery-pill">
+              <input type="radio" name="delivery_mode" value="Online (Live Interactive)">
+              <span>Online (Live Interactive)</span>
+            </label>
+          </div>
+
+          <div class="form-section-title">02 / Guardian Identification</div>
           <label for="guardian">Guardian Full Name *</label>
           <input type="text" id="guardian" required placeholder="Parent or legal guardian name">
 
@@ -449,17 +528,17 @@ textarea {
           <label for="phone2">Secondary Contact Number</label>
           <input type="tel" id="phone2" placeholder="Optional backup contact">
 
-          <div class="form-section-title">02 / Candidate Information</div>
+          <div class="form-section-title">03 / Candidate Information</div>
           <label for="student">Student Full Name *</label>
           <input type="text" id="student" required placeholder="Candidate legal name">
 
           <label for="class">Current Academic Grade / Class</label>
-          <input type="text" id="class" placeholder="e.g. Class 7 or Class 10">
+          <input type="text" id="class" placeholder="e.g. Class 7, Class 10, or Degree">
 
           <label for="school">School or Institution</label>
           <input type="text" id="school" placeholder="Current school and curriculum affiliation">
 
-          <div class="form-section-title">03 / Program Selection</div>
+          <div class="form-section-title">04 / Program Selection</div>
           <div class="checkbox-group course-options">
             <label>
               <input type="checkbox" name="course" value="CBSE Subject Tuition (Class 1-10)">
@@ -479,39 +558,62 @@ textarea {
             </label>
           </div>
 
-          <div class="form-section-title">04 / Subject Needs &amp; Scheduling</div>
+          <div class="form-section-title">05 / Subject Needs &amp; Scheduling</div>
           <label for="notes">Subjects Needed &amp; Additional Information</label>
           <textarea id="notes" placeholder="Specify subjects needed (e.g. Maths, Science, Social, Hindi, English), school exam dates, or difficult topics..."></textarea>
 
           <button type="submit" class="button">
-            Transmit Application via WhatsApp →
+            Transmit Application to Admissions Desk →
           </button>
         </form>
+
+        <div id="reg-status" class="status-box">
+          <strong>Registration Payload Prepared:</strong>
+          <p id="reg-status-text" style="margin:0.5rem 0;color:var(--text-muted);"></p>
+          <div style="margin-top:0.75rem;">
+            <a id="reg-wa-link" href="#" target="_blank" class="button" style="padding:0.6rem 1.25rem;font-size:0.8125rem;">
+              Confirm via WhatsApp Desk →
+            </a>
+          </div>
+        </div>
       </div>
     </div>
 
     <aside class="aside">
       <div class="aside-block">
         <div class="aside-row">
-          <div class="aside-label">Intake Protocol</div>
-          <div class="aside-val" style="color:var(--red);">Direct Transmission</div>
+          <div class="aside-label">Class Delivery</div>
+          <div class="aside-val" style="color:var(--red);">Online &amp; Offline</div>
         </div>
         <div class="aside-row">
-          <div class="aside-label">School Tuition</div>
-          <div class="aside-val">CBSE &amp; State Board (1–10)</div>
+          <div class="aside-label">Center Address</div>
+          <div class="aside-val" style="font-size:0.9375rem;line-height:1.4;">
+            SNRA 23, Sathya Nagar, Karamana, Thiruvananthapuram 695002
+          </div>
         </div>
         <div class="aside-row">
-          <div class="aside-label">Scheduling</div>
-          <div class="aside-val">Need-Based · Flexible</div>
+          <div class="aside-label">Google Maps</div>
+          <div class="aside-val">
+            <a href="https://www.google.com/maps/place/Upadhi+Tuition+center/@8.4769138,76.9683232,17z/data=!3m1!4b1!4m6!3m5!1s0x3b05bb95ebb4f1db:0x214197f38aaa5ebe!8m2!3d8.4769138!4d76.9683232!16s%2Fg%2F11z3z0fcyl" target="_blank" rel="noopener noreferrer" style="color:var(--red);text-decoration:none;font-size:0.875rem;">
+              View Pin on Maps ↗
+            </a>
+          </div>
         </div>
         <div class="aside-row">
-          <div class="aside-label">Exam Ladder</div>
-          <div class="aside-val">9 Certified Stages</div>
-        </div>
-        <div class="aside-row">
-          <div class="aside-label">Direct Desk</div>
+          <div class="aside-label">Direct Helpline</div>
           <div class="aside-val">+91 96333 12986</div>
         </div>
+        <div class="aside-row">
+          <div class="aside-label">Exam Sessions</div>
+          <div class="aside-val">February &amp; August</div>
+        </div>
+      </div>
+
+      <div class="aside-block" style="border-top-color:var(--black);">
+        <div class="aside-label">Direct On-Page Intake</div>
+        <p style="font-size:0.8125rem;color:var(--text-muted);line-height:1.5;margin:0.5rem 0 0 0;">
+          No external Google Forms redirect needed. Submitting prepares an official intake dossier and routes directly to administration.
+        </p>
       </div>
     </aside>
   </section>
@@ -520,7 +622,7 @@ textarea {
 <footer class="site-footer">
   <div class="footer-grid">
     <div class="footer-left">
-      © 2026 Upadhi Tuition Center. All rights reserved.
+      © 2026 Upadhi Tuition Center. SNRA 23, Sathya Nagar, Karamana, Thiruvananthapuram, Kerala 695002.
     </div>
     <div class="footer-right">
       CBSE &amp; STATE BOARD TUITION · DAKSHIN BHARAT HINDI PRACHAR SABHA
@@ -532,6 +634,7 @@ textarea {
 document.getElementById("form").addEventListener("submit", function (e) {
   e.preventDefault();
 
+  const mode = document.querySelector('input[name="delivery_mode"]:checked').value;
   const guardian = document.getElementById('guardian').value.trim();
   const phone = document.getElementById('phone').value.trim();
   const phone2 = document.getElementById('phone2').value.trim();
@@ -546,6 +649,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
 
   const lines = [
     "*NEW CANDIDATE ADMISSION INTAKE*",
+    `Mode: ${mode}`,
     `Guardian: ${guardian}`,
     `Phone: ${phone}`,
     phone2 ? `Additional Contact: ${phone2}` : null,
@@ -556,7 +660,19 @@ document.getElementById("form").addEventListener("submit", function (e) {
     notes ? `Subject Needs & Notes: ${notes}` : null
   ].filter(Boolean).join("\n");
 
-  window.location.href = `https://wa.me/919633312986?text=${encodeURIComponent(lines)}`;
+  const waUrl = `https://wa.me/919633312986?text=${encodeURIComponent(lines)}`;
+
+  // Display status on-page without redirecting
+  const statusEl = document.getElementById('reg-status');
+  const statusText = document.getElementById('reg-status-text');
+  const statusLink = document.getElementById('reg-wa-link');
+
+  statusText.textContent = `Intake dossier for ${student} (${mode}) prepared. Forwarding to Admissions Desk at +91 96333 12986.`;
+  statusLink.href = waUrl;
+  statusEl.classList.add('active');
+
+  // Launch WhatsApp directly
+  window.open(waUrl, '_blank');
 });
 </script>
 
