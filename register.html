@@ -604,6 +604,10 @@ textarea {
           <div class="aside-val">+91 96333 12986</div>
         </div>
         <div class="aside-row">
+          <div class="aside-label">Email Desk</div>
+          <div class="aside-val" style="font-size:0.875rem;word-break:break-all;">rramprasan07@gmail.com</div>
+        </div>
+        <div class="aside-row">
           <div class="aside-label">Exam Sessions</div>
           <div class="aside-val">February &amp; August</div>
         </div>
@@ -622,7 +626,8 @@ textarea {
 <footer class="site-footer">
   <div class="footer-grid">
     <div class="footer-left">
-      © 2026 Upadhi Tuition Center. SNRA 23, Sathya Nagar, Karamana, Thiruvananthapuram, Kerala 695002.
+      © 2026 Upadhi Tuition Center. SNRA 23, Sathya Nagar, Karamana, Thiruvananthapuram, Kerala 695002.<br>
+      Direct: +91 96333 12986 · Email: rramprasan07@gmail.com
     </div>
     <div class="footer-right">
       CBSE &amp; STATE BOARD TUITION · DAKSHIN BHARAT HINDI PRACHAR SABHA
@@ -667,9 +672,32 @@ document.getElementById("form").addEventListener("submit", function (e) {
   const statusText = document.getElementById('reg-status-text');
   const statusLink = document.getElementById('reg-wa-link');
 
-  statusText.textContent = `Intake dossier for ${student} (${mode}) prepared. Forwarding to Admissions Desk at +91 96333 12986.`;
+  statusText.textContent = `Intake dossier for ${student} (${mode}) emailed to rramprasan07@gmail.com and prepared for WhatsApp verification.`;
   statusLink.href = waUrl;
   statusEl.classList.add('active');
+
+  // Dispatch background email notification to rramprasan07@gmail.com via AJAX
+  try {
+    fetch("https://formsubmit.co/ajax/rramprasan07@gmail.com", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        _subject: `New Candidate Registration: ${student} (${mode})`,
+        delivery_mode: mode,
+        guardian: guardian,
+        phone: phone,
+        phone2: phone2,
+        candidate_name: student,
+        grade: classEl,
+        institution: school,
+        programs: courses.join(", "),
+        notes: notes
+      })
+    }).catch(function(err){ console.log("Email dispatch queued"); });
+  } catch(e) {}
 
   // Launch WhatsApp directly
   window.open(waUrl, '_blank');
