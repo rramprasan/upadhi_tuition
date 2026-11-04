@@ -39,7 +39,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Inter, Arial, sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.5;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -55,7 +55,7 @@ body {
 h1 {
   font-size: 3.75rem;
   font-weight: 700;
-  line-height: 1.08;
+  line-height: 1.1;
   letter-spacing: -0.025em;
   margin: 0 0 1.5rem 0;
 }
@@ -63,7 +63,7 @@ h1 {
 h2 {
   font-size: 2.25rem;
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.18;
   letter-spacing: -0.02em;
   margin: 0 0 1rem 0;
 }
@@ -99,9 +99,9 @@ p {
 }
 
 .lead {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: var(--text-muted);
-  line-height: 1.6;
+  line-height: 1.7;
   margin: 0 0 2rem 0;
 }
 
@@ -327,7 +327,7 @@ p {
 
 .ledger-notice {
   font-size: 0.8125rem;
-  line-height: 1.45;
+  line-height: 1.55;
   color: var(--text-muted);
   border-left: 2px solid var(--black);
   padding-left: 0.75rem;
@@ -354,7 +354,7 @@ p {
 .feature-box {
   background: var(--white);
   border: 1px solid var(--rule);
-  padding: 1.75rem 1.5rem;
+  padding: 2rem 1.75rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -380,18 +380,20 @@ p {
 }
 
 .feature-text {
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   color: var(--text-muted);
-  line-height: 1.55;
+  line-height: 1.65;
   margin: 0;
 }
 
-/* PROGRAM CARDS (Strict Modular Split) */
+/* ==========================================================================
+   PROGRAM CARDS (Natural Flowing Editorial Style)
+   ========================================================================== */
 .program-box {
   background: var(--white);
   border: 1px solid var(--rule);
   border-top: 3px solid var(--black);
-  padding: 2rem 1.75rem;
+  padding: 2.5rem 2.25rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -404,7 +406,6 @@ p {
 
 .program-box.featured {
   border-top: 3px solid var(--red);
-  background: #FCFCFC;
 }
 
 .program-tag {
@@ -414,52 +415,60 @@ p {
   letter-spacing: 0.1em;
   color: var(--red);
   text-transform: uppercase;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   display: block;
 }
 
-.program-meta-badge {
-  display: inline-block;
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.6875rem;
+.program-title {
+  font-size: 1.5rem;
   font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  padding: 0.25rem 0.625rem;
-  border: 1px solid var(--black);
-  background: var(--black);
-  color: var(--white);
-  margin-bottom: 1rem;
+  letter-spacing: -0.015em;
+  color: var(--black);
+  margin: 0 0 0.35rem 0;
+  line-height: 1.25;
 }
 
-.program-desc {
-  font-size: 0.9375rem;
+.program-subtitle {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
   color: var(--text-muted);
-  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  display: block;
+  letter-spacing: 0.04em;
+}
+
+/* FLOWING EDITORIAL PARAGRAPHS */
+.program-flow-text {
+  font-size: 0.9375rem;
+  color: #374151;
+  line-height: 1.75;
+  margin-bottom: 1.75rem;
+}
+
+.program-flow-text p {
   margin: 0 0 1rem 0;
 }
 
-.program-specs {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.program-flow-text p:last-child {
+  margin-bottom: 0;
+}
+
+.program-footer-meta {
   border-top: 1px solid var(--rule);
-  padding-top: 0.875rem;
-}
-
-.program-specs li {
-  font-size: 0.8125rem;
-  color: var(--black);
-  margin-bottom: 0.35rem;
+  padding-top: 1rem;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  color: var(--text-muted);
 }
 
-.program-specs li::before {
-  content: "■";
-  color: var(--red);
-  font-size: 0.625rem;
+.program-footer-meta strong {
+  color: var(--black);
 }
 
 /* ==========================================================================
@@ -505,7 +514,7 @@ p {
 .tier-module {
   grid-column: span 12;
   border: 1px solid var(--black);
-  padding: 2rem;
+  padding: 2.25rem 2rem;
   background: var(--white);
   margin-bottom: 0.5rem;
 }
@@ -549,9 +558,9 @@ p {
 }
 
 .tier-desc-text {
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   color: var(--text-muted);
-  line-height: 1.5;
+  line-height: 1.6;
   margin: 0.35rem 0 0 0;
 }
 
@@ -582,7 +591,7 @@ p {
 .stage-card-swiss {
   background: var(--white);
   border: 1px solid var(--rule);
-  padding: 1.5rem;
+  padding: 1.75rem 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -642,9 +651,9 @@ p {
 }
 
 .stage-body-text {
-  font-size: 0.8125rem;
-  color: var(--text-muted);
-  line-height: 1.6;
+  font-size: 0.875rem;
+  color: #4B5563;
+  line-height: 1.65;
   margin: 0 0 1.25rem 0;
 }
 
@@ -704,7 +713,7 @@ p {
 .recognition-left p {
   color: #9CA3AF;
   font-size: 0.875rem;
-  line-height: 1.6;
+  line-height: 1.65;
   margin: 0;
 }
 
@@ -738,7 +747,7 @@ p {
 .recognition-cell .rc-equiv {
   font-size: 0.75rem;
   color: #9CA3AF;
-  line-height: 1.3;
+  line-height: 1.35;
 }
 
 /* FULL-WIDTH CTA STRIP */
@@ -769,6 +778,7 @@ p {
 .cta-text p {
   font-size: 1.0625rem;
   color: var(--text-muted);
+  line-height: 1.6;
   margin: 0;
 }
 
@@ -1012,82 +1022,106 @@ p {
     </div>
   </section>
 
-  <!-- PROGRAMS SECTION (Modular 2x2 Grid) -->
+  <!-- PROGRAMS SECTION (Flowing Editorial Grid) -->
   <section class="grid" id="tuition-programs">
     <div class="section-head">
       <span class="eyebrow">02 / CURRICULUM</span>
       <h2>Academic programs.</h2>
       <p class="lead" style="margin-bottom:1rem;">
-        Rigorous academic support designed for school students and language learners, with flexible subject-specific scheduling.
+        Comprehensive academic support designed for school students and language learners, with flexible subject-specific scheduling.
       </p>
     </div>
 
-    <!-- Program 01: CBSE & State Board Tuition (Prominent Feature) -->
+    <!-- Program 01: CBSE & State Board Tuition -->
     <div class="program-box featured col-6">
       <div>
         <span class="program-tag">Program 01 · School Tuition</span>
-        <span class="program-meta-badge">CBSE &amp; State Board · Class 1 to 10</span>
-        <h3>CBSE &amp; State Board Subject Tuition</h3>
-        <p class="program-desc">
-          Structured, need-based subject tuition for students following CBSE and State Board curricula. Classes are organized and scheduled flexibly according to the student's individual academic requirements, school syllabus, and exam schedules.
-        </p>
+        <h3 class="program-title">CBSE &amp; State Board Subject Tuition</h3>
+        <span class="program-subtitle">Class 1 to 10 · Flexible &amp; Need-Based Scheduling</span>
+        
+        <div class="program-flow-text">
+          <p>
+            We provide structured, individualized subject tuition for school students following both CBSE and State Board curricula from Class 1 through Class 10. Rather than enforcing a rigid one-size-fits-all schedule, classes are organized flexibly around each student's specific academic needs, school syllabus, and upcoming examination calendar.
+          </p>
+          <p>
+            Whether a student requires comprehensive guidance across all core subjects—such as Mathematics, Science, Social Science, and Languages—or focused reinforcement in a single challenging area, our faculty provides clear concept explanations, regular doubt-clearing, and systematic test series aligned with their school exams.
+          </p>
+        </div>
       </div>
-      <ul class="program-specs">
-        <li><strong>Need-Based Scheduling:</strong> Tailored support focusing on subjects where the student needs reinforcement.</li>
-        <li><strong>Comprehensive Coverage:</strong> Mathematics, Science, Social Science, and Language papers.</li>
-        <li><strong>Exam Readiness:</strong> Periodic test series, concept doubt-clearing, and revision aligned with school exams.</li>
-      </ul>
+
+      <div class="program-footer-meta">
+        <span><strong>Curriculum:</strong> CBSE &amp; State Board</span>
+        <span><strong>Format:</strong> Need-Based Scheduling</span>
+      </div>
     </div>
 
     <!-- Program 02: Hindi Prachar Sabha -->
     <div class="program-box col-6">
       <div>
         <span class="program-tag">Program 02 · Certified Examination Ladder</span>
-        <span class="program-meta-badge">Dakshin Bharat Hindi Prachar Sabha</span>
-        <h3>Hindi Prachar Sabha Coaching (All 9 Stages)</h3>
-        <p class="program-desc">
-          Systematic preparation across all nine examination stages, from foundational Parichaya through Praveen. Officially recognized for SSLC, B.A. Hindi, and M.A. Hindi equivalence.
-        </p>
+        <h3 class="program-title">Hindi Prachar Sabha Coaching</h3>
+        <span class="program-subtitle">All 9 Stages: Parichaya to Praveen · Feb &amp; Aug Sessions</span>
+        
+        <div class="program-flow-text">
+          <p>
+            Upadhi Tuition Center offers comprehensive, stage-by-stage coaching for all nine progressive examinations conducted by Dakshin Bharat Hindi Prachar Sabha (Madras). From foundational literacy in Parichaya through post-graduate scholarship in Praveen, students receive dedicated preparation tailored for the biannual February and August examination sessions.
+          </p>
+          <p>
+            Coaching covers the complete official curriculum—including Devanagari phonetics, applied grammar rules, classical and modern prose, poetry, and bidirectional translation—culminating in government-recognized credentials equivalent to SSLC (Praveshika), B.A. Hindi (Visharad), and M.A. Hindi (Praveen).
+          </p>
+        </div>
       </div>
-      <ul class="program-specs">
-        <li><strong>Exam Cycles:</strong> Dedicated batches for February and August examination sessions.</li>
-        <li><strong>Complete Syllabus:</strong> Grammar, textbook prose, classical poetry, essays, and translation.</li>
-        <li><strong>Govt. Recognition:</strong> Central and State Government recognized qualifications.</li>
-      </ul>
+
+      <div class="program-footer-meta">
+        <span><strong>Sessions:</strong> February &amp; August</span>
+        <span><strong>Equivalence:</strong> SSLC, B.A. &amp; M.A.</span>
+      </div>
     </div>
 
     <!-- Program 03: English Tuition -->
     <div class="program-box col-6">
       <div>
         <span class="program-tag">Program 03 · Language Studies</span>
-        <span class="program-meta-badge">Class 1 to 12 &amp; Spoken English</span>
-        <h3>English Language Tuition</h3>
-        <p class="program-desc">
-          Structured training designed to build grammar mastery, reading comprehension, writing precision, and confident conversational fluency for school examinations and daily life.
-        </p>
+        <h3 class="program-title">English Language Tuition</h3>
+        <span class="program-subtitle">Class 1 to 12 · Grammar, Composition &amp; Speaking</span>
+        
+        <div class="program-flow-text">
+          <p>
+            Our English tuition classes focus on building strong conceptual foundations in grammar, active vocabulary, reading comprehension, and formal writing. Designed for school students seeking academic excellence as well as learners developing conversational confidence, sessions integrate sentence structure analysis, textbook prose and poetry study, and guided speaking practice.
+          </p>
+          <p>
+            Students learn to articulate ideas clearly, eliminate common grammatical errors, and approach school essay writing and reading comprehension papers with ease and confidence.
+          </p>
+        </div>
       </div>
-      <ul class="program-specs">
-        <li><strong>Grammar &amp; Mechanics:</strong> Sentence structures, tenses, active/passive voice, and vocabulary.</li>
-        <li><strong>School Curriculum:</strong> Textbook prose, poetry analysis, and formal essay/letter writing.</li>
-        <li><strong>Communication:</strong> Pronunciation, speaking activities, and stage confidence.</li>
-      </ul>
+
+      <div class="program-footer-meta">
+        <span><strong>Scope:</strong> Grammar &amp; Literature</span>
+        <span><strong>Focus:</strong> Academic &amp; Conversational</span>
+      </div>
     </div>
 
     <!-- Program 04: Malayalam Tuition -->
     <div class="program-box col-6">
       <div>
         <span class="program-tag">Program 04 · Regional Language</span>
-        <span class="program-meta-badge">KG through Class 12</span>
-        <h3>Malayalam Language Tuition</h3>
-        <p class="program-desc">
-          From basic letter formation (Aksharamala) to higher secondary textbook literature, grammar, and formal writing, tailored for both beginners and school-syllabus students.
-        </p>
+        <h3 class="program-title">Malayalam Language Tuition</h3>
+        <span class="program-subtitle">KG through Class 12 · Reading, Writing &amp; Literature</span>
+        
+        <div class="program-flow-text">
+          <p>
+            Covering students from kindergarten through Class 12, our Malayalam language coaching supports both complete beginners learning the script and students following State Board or CBSE school syllabi. Instruction progresses systematically from Aksharamala letter recognition and correct pronunciation through applied grammar, textbook prose, poetry appreciation, and formal composition.
+          </p>
+          <p>
+            Individualized attention ensures that students overcome writing and spelling difficulties (chillaksharangal and kootaksharangal) while developing an authentic appreciation for Malayalam literature.
+          </p>
+        </div>
       </div>
-      <ul class="program-specs">
-        <li><strong>Foundation:</strong> Script recognition, vowel/consonant combinations (chillaksharangal), and pronunciation.</li>
-        <li><strong>Academic Support:</strong> State board and CBSE Malayalam textbook assistance and test preparation.</li>
-        <li><strong>Fluency:</strong> Reading comprehension, essay drafting, and vocabulary development.</li>
-      </ul>
+
+      <div class="program-footer-meta">
+        <span><strong>Grades:</strong> KG to Class 12</span>
+        <span><strong>Boards:</strong> State &amp; CBSE Support</span>
+      </div>
     </div>
   </section>
 
